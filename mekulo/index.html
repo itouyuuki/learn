@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>めくろうワークス | 体を動かし手稼ぐ特集</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== ヘッダー ===== -->
+    <header class="header">
+        <button class="header-menu-btn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <nav class="header-nav">
+            <button class="header-nav-link">サービスの使い方</button>
+            <div class="header-nav-divider"></div>
+            <button class="header-nav-btn">マイページ</button>
+        </nav>
+    </header>
+
+    <!-- ===== メインコンテンツ ===== -->
+    <main class="main">
+        <!-- ===== フィルターセクション ===== -->
+        <section class="filter-section">
+            <details class="filter-card" open>
+                <summary class="filter-summary">
+                    <div class="filter-summary-left">
+                        <span class="filter-summary-icon">
+                            <span class="material-symbols-outlined">tune</span>
+                        </span>
+                        <div class="filter-summary-text">
+                            <span class="filter-summary-title">営業スタイル条件を選択 (15軸)</span>
+                            <span class="filter-summary-sub">プロフェッショナル統合軸分析</span>
+                        </div>
+                    </div>
+                    <span class="filter-summary-right">
+                        <span class="filter-badge">15 / 15 選択中</span>
+                        <span class="material-symbols-outlined filter-chevron">expand_more</span>
+                    </span>
+                </summary>
+                <div class="filter-body">
+                    <div class="filter-row">
+                        <span class="filter-row-label">勤務場所</span>
+                        <div class="filter-row-btns">
+                            <button class="filter-btn active">外回り中心<span class="axis-badge">1</span></button>
+                            <button class="filter-btn inactive">オフィス中心</button>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <span class="filter-row-label">アプローチ</span>
+                        <div class="filter-row-btns">
+                            <button class="filter-btn inactive">新規（狩猟）</button>
+                            <button class="filter-btn active">既存（農耕）<span class="axis-badge">2</span></button>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <span class="filter-row-label">顧客属性</span>
+                        <div class="filter-row-btns">
+                            <button class="filter-btn active">B2B（対法人）<span class="axis-badge">3</span></button>
+                            <button class="filter-btn inactive">B2C（対個人）</button>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <span class="filter-row-label">リード獲得</span>
+                        <div class="filter-row-btns">
+                            <button class="filter-btn active">反響営業<span class="axis-badge">4</span></button>
+                            <button class="filter-btn inactive">プッシュ型</button>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <span class="filter-row-label">商談形式</span>
+                        <div class="filter-row-btns">
+                            <button class="filter-btn inactive">対面重視</button>
+                            <button class="filter-btn active">オンライン中心<span class="axis-badge">5</span></button>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <span class="filter-row-label">商材価格</span>
+                        <div class="filter-row-btns">
+                            <button class="filter-btn inactive">少額・リピート</button>
+                            <button class="filter-btn active">高額・コンサル<span class="axis-badge">6</span></button>
+                        </div>
+                    </div>
+                    <div class="filter-reset">
+                        <button class="filter-reset-btn">
+                            <span class="material-symbols-outlined">refresh</span>
+                            条件をすべてリセット
+                        </button>
+                    </div>
+                </div>
+            </details>
+            <div class="filter-tags">
+                <span class="filter-tags-label">適用中のフィルター：</span>
+                <span class="filter-tag">外回り</span>
+                <span class="filter-tag">既存（農耕）</span>
+                <span class="filter-tag">B2B</span>
+            </div>
+        </section>
+
+        <!-- ===== 求人カード一覧 ===== -->
+        <div class="job-cards">
+
+            <!-- ネクストリザベーション株式会社 -->
+            <article class="job-card">
+                <div class="job-card-inner">
+                    <div class="job-card-layout">
+                        <div class="job-card-header">
+                            <div class="job-card-header-info">
+                                <p class="job-card-company">ネクストリザベーション株式会社</p>
+                                <h3 class="job-card-title">戦略提案営業</h3>
+                                <div class="job-card-tags">
+                                    <span class="job-card-tag">クラウド・インフラ</span>
+                                    <span class="job-card-tag">外資系SaaS</span>
+                                </div>
+                            </div>
+                            <div class="job-card-actions">
+                                <a href="#" class="job-card-link">
+                                    求人を見る <span class="material-symbols-outlined">north_east</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="job-card-image">
+                            <img src="nr.jpg" alt="ネクストリザベーション株式会社">
+                        </div>
+                        <div class="spectrum-section">
+                            <div class="spectrum-header">
+                                <span class="material-symbols-outlined">analytics</span>
+                                <span class="spectrum-header-text">営業スタイル</span>
+                            </div>
+                            <div class="spectrum-list">
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">勤務場所</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 92%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">外回り中心</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">アプローチ</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 78%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">既存（農耕）</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">商材価格</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 85%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">高額・コンサル</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="job-card-desc">
+                            当社は、長野県の東信・中信地域を中心に、地元の企業や商店の経営者の皆さんから"経営の悩み"をうかがい、ITを使ってそれを解決したり、解決を支援したりするサービスを提供しています。
+                        </p>
+                    </div>
+                    <button class="spectrum-more-btn">
+                        残り12項目を表示 <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+</body>
+</html>
