@@ -12,7 +12,7 @@
     <main class="main">
         <!-- ===== フィルターセクション ===== -->
         <section class="filter-section">
-            <details class="filter-card" open>
+            <details class="filter-card">
                 <summary class="filter-summary">
                     <span class="material-symbols-outlined filter-summary-icon">filter_list</span>
                     <span class="filter-summary-title">営業スタイルを絞り込む</span>
@@ -67,9 +67,18 @@
                 </div>
             </details>
             <div class="filter-tags">
-                <span class="filter-tag">外回り</span>
-                <span class="filter-tag">既存（農耕）</span>
-                <span class="filter-tag">B2B</span>
+                <button class="filter-tag">
+                    <span>外回り</span>
+                    <span class="material-symbols-outlined filter-tag-close">close</span>
+                </button>
+                <button class="filter-tag">
+                    <span>既存（農耕）</span>
+                    <span class="material-symbols-outlined filter-tag-close">close</span>
+                </button>
+                <button class="filter-tag">
+                    <span>B2B</span>
+                    <span class="material-symbols-outlined filter-tag-close">close</span>
+                </button>
             </div>
         </section>
 
@@ -271,6 +280,17 @@
                     btn.childNodes[0].textContent = '残り12項目を表示 ';
                     icon.textContent = 'expand_more';
                 }
+            });
+        });
+
+        // フィルタータグの閉じるボタン
+        document.querySelectorAll('.filter-tag').forEach(function(tag) {
+            tag.addEventListener('click', function() {
+                this.style.opacity = '0';
+                this.style.transform = 'scale(0.8)';
+                setTimeout(function() {
+                    tag.remove();
+                }, 200);
             });
         });
     </script>

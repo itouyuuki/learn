@@ -352,14 +352,41 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .filter-tag {
-    padding: 4px 10px;
-    background-color: rgba(60, 93, 168, 0.05);
-    color: #3c5da8;
-    border-radius: 6px;
-    font-size: 10px;
+    display: inline-flex;
+    font-size: 14px;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: #3c5da8;
+    color: #fff;
+    border-radius: 9999px;
+    font-size: 11px;
     font-weight: 700;
-    border: 1px solid rgba(60, 93, 168, 0.1);
+    border: none;
     white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(60, 93, 168, 0.2);
+}
+
+.filter-tag:hover {
+    opacity: 0.9;
+}
+
+/* Material Icons のデフォルトスタイルをリセット */
+.filter-tag-close.material-symbols-outlined {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    color: #3c5da8;
+    padding: 0;
+    overflow: hidden;
 }
 
 /* ==========================================================================
