@@ -157,7 +157,7 @@ img {
 }
 
 /* ==========================================================================
-   フィルターセクション（統合: details/summary ベース）
+   フィルターセクション
    ========================================================================== */
 .filter-section {
     background-color: #fff;
@@ -167,6 +167,7 @@ img {
     border: 1px solid #e2e8f0;
     border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgb(60 93 168 / 0.3), 0 8px 10px -6px rgb(60 93 168 / 0.3);
 }
 
 .filter-summary {
@@ -174,60 +175,34 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
     padding: 16px;
     cursor: pointer;
     transition: background-color 0.2s;
-}
-
-.filter-summary:hover {
-    background-color: #f8fafc;
+    background-color: #3c5da8;
 }
 
 .filter-summary::-webkit-details-marker {
     display: none;
 }
 
-.filter-summary-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .filter-summary-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #3c5da8;
-}
-
-.filter-summary-icon .material-symbols-outlined {
+    color: white;
     font-size: 20px;
 }
 
 .filter-summary-title {
     font-size: 13px;
-    font-weight: 700;
-    color: #1e293b;
+    font-weight: 900;
+    color: #0f172a;
     letter-spacing: -0.025em;
-}
-
-.filter-summary-sub {
-    display: none;
-}
-
-.filter-summary-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.filter-badge {
-    display: none;
+    flex: 1;
+    color: white;
 }
 
 .filter-chevron {
-    color: #94a3b8;
-    transition: transform 0.2s;
+    color: white;
+    transition: transform 0.3s ease-out;
 }
 
 details[open] > .filter-summary .filter-chevron {
@@ -239,48 +214,80 @@ details[open] > .filter-summary .filter-chevron {
     padding: 0 16px 20px;
 }
 
-.filter-body > * + * {
-    margin-top: 16px;
+/* カテゴリーグループ */
+.filter-group {
+    margin-bottom: 24px;
 }
 
-.filter-row {
+.filter-group:last-of-type {
+    margin-bottom: 16px;
+}
+
+.filter-category-title {
     display: flex;
     align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.filter-category-divider {
+    flex: 1;
+    height: 1px;
+    background-color: #f1f5f9;
+}
+
+/* カテゴリー内アイテム */
+.filter-category-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
     gap: 12px;
 }
 
-.filter-row-label {
-    font-size: 11px;
-    font-weight: 700;
-    color: #64748b;
-    width: 64px;
-    flex-shrink: 0;
+.filter-item-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-.filter-row-btns {
-    flex: 1;
-    display: flex;
-    gap: 4px;
-    background-color: #f8fafc;
-    padding: 4px;
-    border-radius: 8px;
+.filter-item-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.filter-help-icon {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.filter-item-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
 }
 
 .filter-btn {
-    flex: 1;
-    padding: 6px 0;
+    padding: 10px;
     font-size: 11px;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 8px;
     text-align: center;
     transition: all 0.2s;
-    position: relative;
 }
 
 .filter-btn.active {
     background-color: #3c5da8;
     color: #fff;
-    box-shadow: 0 1px 3px rgba(60, 93, 168, 0.2);
+    box-shadow: 0 1px 2px rgba(60, 93, 168, 0.2);
 }
 
 .filter-btn.inactive {
@@ -289,12 +296,51 @@ details[open] > .filter-summary .filter-chevron {
     border: 1px solid #f1f5f9;
 }
 
-.axis-badge {
-    display: none;
+/* アクションボタン */
+.filter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
 }
 
-.filter-reset {
-    display: none;
+.filter-apply-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #3c5da8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(60, 93, 168, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.filter-apply-btn:active {
+    transform: scale(0.98);
+}
+
+.filter-reset-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    transition: color 0.2s;
+}
+
+.filter-reset-btn:hover {
+    color: #3c5da8;
+}
+
+.filter-reset-btn .material-symbols-outlined {
+    font-size: 16px;
 }
 
 /* フィルタータグ */
@@ -305,14 +351,7 @@ details[open] > .filter-summary .filter-chevron {
     margin-top: 12px;
 }
 
-.filter-tags-label {
-    display: none;
-}
-
 .filter-tag {
-    display: flex;
-    align-items: center;
-    gap: 6px;
     padding: 4px 10px;
     background-color: rgba(60, 93, 168, 0.05);
     color: #3c5da8;
@@ -342,6 +381,7 @@ details[open] > .filter-summary .filter-chevron {
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(226, 232, 240, 0.4);
     transition: box-shadow 0.3s;
+    margin: 20px 0;
 }
 
 .job-card:hover {
@@ -578,6 +618,45 @@ details[open] > .filter-summary .filter-chevron {
     font-size: 14px;
 }
 
+/* 隠し項目 */
+.spectrum-hidden-items {
+    display: none;
+}
+
+.job-card.expanded .spectrum-hidden-items {
+    display: block;
+}
+
+.spectrum-hidden-items > * + * {
+    margin-top: 12px;
+}
+
+.spectrum-category {
+    font-size: 9px;
+    font-weight: 900;
+    color: #64748b;
+    letter-spacing: 0.05em;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* 展開時: 説明文を左カラムに移動（モバイル） */
+.job-card.expanded .job-card-layout {
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto auto auto auto;
+}
+
+.job-card.expanded .job-card-desc {
+    grid-column: 1;
+    grid-row: 3;
+    border-top: none;
+    padding-top: 0;
+}
+
+.job-card.expanded .spectrum-section {
+    grid-row: 2 / 5;
+}
+
 /* ==========================================================================
    もっと読み込むボタン
    ========================================================================== */
@@ -724,178 +803,99 @@ details[open] > .filter-summary .filter-chevron {
         display: block;
     }
 
-    /* --- フィルター（PC化） --- */
+    /* --- フィルター（PC） --- */
     .filter-card {
         border-radius: 32px;
         box-shadow: 0 25px 50px -12px rgba(226, 232, 240, 0.4);
     }
 
     .filter-summary {
-        padding: 24px;
+        padding: 24px 32px;
         border-bottom: 1px solid #f1f5f9;
     }
 
-    .filter-summary-left {
-        gap: 16px;
-    }
-
     .filter-summary-icon {
-        background-color: #3c5da8;
-        color: #fff;
-        padding: 8px;
-        border-radius: 12px;
-    }
-
-    .filter-summary-icon .material-symbols-outlined {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .filter-summary-title {
-        font-size: 18px;
-        font-weight: 900;
-    }
-
-    .filter-summary-sub {
-        display: block;
-        font-size: 10px;
-        color: #94a3b8;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        font-style: italic;
-    }
-
-    .filter-badge {
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 700;
-        color: #3c5da8;
-        background-color: rgba(60, 93, 168, 0.05);
-        padding: 4px 12px;
-        border-radius: 9999px;
-        border: 1px solid rgba(60, 93, 168, 0.1);
-    }
-
-    .filter-chevron {
-        display: none;
+        font-size: 16px;
     }
 
     .filter-body {
-        padding: 0 0 24px;
+        padding: 0 32px 24px;
     }
 
-    .filter-body > * + * {
-        margin-top: 0;
+    .filter-group {
+        margin-bottom: 32px;
     }
 
-    .filter-row {
-        gap: 0;
-        padding: 16px 32px;
-        border-bottom: 1px solid #f8fafc;
+    .filter-group:last-of-type {
+        margin-bottom: 24px;
     }
 
-    .filter-row:nth-child(even) {
-        background-color: #fcfcfc;
-    }
-
-    .filter-row-label {
+    .filter-category-title {
         font-size: 14px;
-        width: 192px;
-        color: #333;
+        margin-bottom: 24px;
     }
 
-    .filter-row-btns {
-        padding: 4px;
-        background-color: rgba(241, 245, 249, 0.6);
-        border-radius: 9999px;
-        border: 1px solid #e2e8f0;
-        max-width: 512px;
-        gap: 0;
+    .filter-category-items {
+        gap: 32px;
+    }
+
+    .filter-item {
+        gap: 16px;
+    }
+
+    .filter-item-header {
+        gap: 8px;
+    }
+
+    .filter-item-label {
+        font-size: 13px;
+    }
+
+    .filter-help-icon {
+        font-size: 18px;
+    }
+
+    .filter-item-btns {
+        gap: 12px;
     }
 
     .filter-btn {
-        padding: 8px 24px;
+        padding: 14px;
         font-size: 13px;
-        border-radius: 9999px;
+        border-radius: 12px;
     }
 
-    .filter-btn.active {
-        font-weight: 900;
-        box-shadow: 0 4px 6px -1px rgba(60, 93, 168, 0.2);
+    .filter-actions {
+        gap: 20px;
+        padding-top: 24px;
     }
 
-    .filter-btn.inactive {
-        background-color: transparent;
-        border: none;
-        color: rgba(51, 51, 51, 0.4);
-    }
-
-    .filter-btn.inactive:hover {
-        color: rgba(51, 51, 51, 0.7);
-    }
-
-    .axis-badge {
-        display: flex;
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        border: 1px solid #3c5da8;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        font-size: 9px;
-        font-weight: 900;
-        color: #3c5da8;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    }
-
-    .filter-reset {
-        display: flex;
-        justify-content: center;
-        margin-top: 16px;
-        padding-bottom: 8px;
+    .filter-apply-btn {
+        padding: 18px;
+        font-size: 15px;
+        border-radius: 16px;
     }
 
     .filter-reset-btn {
-        display: flex;
-        align-items: center;
+        font-size: 13px;
         gap: 8px;
-        padding: 12px 40px;
-        border-radius: 9999px;
-        background-color: #f8fafc;
-        color: #3c5da8;
-        font-weight: 900;
-        font-size: 14px;
-        border: 1px solid rgba(60, 93, 168, 0.2);
-        transition: background-color 0.2s;
-    }
-
-    .filter-reset-btn:hover {
-        background-color: rgba(60, 93, 168, 0.1);
     }
 
     .filter-reset-btn .material-symbols-outlined {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     /* フィルタータグ（PC） */
     .filter-tags {
         margin-top: 0;
-        padding: 16px 24px;
+        padding: 16px 32px;
         background-color: #f8fafc;
         border-top: 1px solid #f1f5f9;
         border-radius: 0 0 32px 32px;
-    }
-
-    .filter-tags-label {
-        display: inline;
-        font-size: 10px;
-        font-weight: 900;
-        color: #94a3b8;
-        white-space: nowrap;
-        letter-spacing: 0.1em;
     }
 
     .filter-tag {
@@ -1064,6 +1064,47 @@ details[open] > .filter-summary .filter-chevron {
         margin-top: 32px;
         padding-top: 24px;
         border-top: 1px solid rgba(226, 232, 240, 0.5);
+    }
+
+    .spectrum-hidden-items > * + * {
+        margin-top: 32px;
+    }
+
+    .spectrum-category {
+        font-size: 11px;
+        padding-top: 24px;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    /* 展開時: PC レイアウト */
+    .job-card.expanded .job-card-layout {
+        grid-template-columns: 256px 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 0 40px;
+    }
+
+    .job-card.expanded .job-card-image {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+    }
+
+    .job-card.expanded .job-card-header {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .job-card.expanded .job-card-desc {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-top: 24px;
+    }
+
+    .job-card.expanded .spectrum-section {
+        grid-column: 2;
+        grid-row: 2 / 4;
     }
 
     /* --- もっと読み込む --- */

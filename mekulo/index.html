@@ -9,92 +9,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- ===== ヘッダー ===== -->
-    <header class="header">
-        <button class="header-menu-btn">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-        <nav class="header-nav">
-            <button class="header-nav-link">サービスの使い方</button>
-            <div class="header-nav-divider"></div>
-            <button class="header-nav-btn">マイページ</button>
-        </nav>
-    </header>
-
-    <!-- ===== メインコンテンツ ===== -->
     <main class="main">
         <!-- ===== フィルターセクション ===== -->
         <section class="filter-section">
             <details class="filter-card" open>
                 <summary class="filter-summary">
-                    <div class="filter-summary-left">
-                        <span class="filter-summary-icon">
-                            <span class="material-symbols-outlined">tune</span>
-                        </span>
-                        <div class="filter-summary-text">
-                            <span class="filter-summary-title">営業スタイル条件を選択 (15軸)</span>
-                            <span class="filter-summary-sub">プロフェッショナル統合軸分析</span>
-                        </div>
-                    </div>
-                    <span class="filter-summary-right">
-                        <span class="filter-badge">15 / 15 選択中</span>
-                        <span class="material-symbols-outlined filter-chevron">expand_more</span>
-                    </span>
+                    <span class="material-symbols-outlined filter-summary-icon">filter_list</span>
+                    <span class="filter-summary-title">営業スタイルを絞り込む</span>
+                    <span class="material-symbols-outlined filter-chevron">expand_more</span>
                 </summary>
                 <div class="filter-body">
-                    <div class="filter-row">
-                        <span class="filter-row-label">勤務場所</span>
-                        <div class="filter-row-btns">
-                            <button class="filter-btn active">外回り中心<span class="axis-badge">1</span></button>
-                            <button class="filter-btn inactive">オフィス中心</button>
+                    <div class="filter-group">
+                        <h3 class="filter-category-title">
+                            <span>働き方</span>
+                            <div class="filter-category-divider"></div>
+                        </h3>
+                        <div class="filter-category-items">
+                            <div class="filter-item">
+                                <div class="filter-item-header">
+                                    <span class="filter-item-label">勤務場所</span>
+                                    <span class="material-symbols-outlined filter-help-icon">help</span>
+                                </div>
+                                <div class="filter-item-btns">
+                                    <button class="filter-btn active">外回り中心</button>
+                                    <button class="filter-btn inactive">オフィス中心</button>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <div class="filter-item-header">
+                                    <span class="filter-item-label">アプローチ</span>
+                                    <span class="material-symbols-outlined filter-help-icon">help</span>
+                                </div>
+                                <div class="filter-item-btns">
+                                    <button class="filter-btn inactive">新規（狩猟）</button>
+                                    <button class="filter-btn active">既存（農耕）</button>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <div class="filter-item-header">
+                                    <span class="filter-item-label">顧客属性</span>
+                                    <span class="material-symbols-outlined filter-help-icon">help</span>
+                                </div>
+                                <div class="filter-item-btns">
+                                    <button class="filter-btn active">B2B</button>
+                                    <button class="filter-btn inactive">B2C</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="filter-row">
-                        <span class="filter-row-label">アプローチ</span>
-                        <div class="filter-row-btns">
-                            <button class="filter-btn inactive">新規（狩猟）</button>
-                            <button class="filter-btn active">既存（農耕）<span class="axis-badge">2</span></button>
-                        </div>
-                    </div>
-                    <div class="filter-row">
-                        <span class="filter-row-label">顧客属性</span>
-                        <div class="filter-row-btns">
-                            <button class="filter-btn active">B2B（対法人）<span class="axis-badge">3</span></button>
-                            <button class="filter-btn inactive">B2C（対個人）</button>
-                        </div>
-                    </div>
-                    <div class="filter-row">
-                        <span class="filter-row-label">リード獲得</span>
-                        <div class="filter-row-btns">
-                            <button class="filter-btn active">反響営業<span class="axis-badge">4</span></button>
-                            <button class="filter-btn inactive">プッシュ型</button>
-                        </div>
-                    </div>
-                    <div class="filter-row">
-                        <span class="filter-row-label">商談形式</span>
-                        <div class="filter-row-btns">
-                            <button class="filter-btn inactive">対面重視</button>
-                            <button class="filter-btn active">オンライン中心<span class="axis-badge">5</span></button>
-                        </div>
-                    </div>
-                    <div class="filter-row">
-                        <span class="filter-row-label">商材価格</span>
-                        <div class="filter-row-btns">
-                            <button class="filter-btn inactive">少額・リピート</button>
-                            <button class="filter-btn active">高額・コンサル<span class="axis-badge">6</span></button>
-                        </div>
-                    </div>
-                    <div class="filter-reset">
+                    <div class="filter-actions">
+                        <button class="filter-apply-btn">この条件で並び替え</button>
                         <button class="filter-reset-btn">
-                            <span class="material-symbols-outlined">refresh</span>
+                            <span class="material-symbols-outlined">restart_alt</span>
                             条件をすべてリセット
                         </button>
                     </div>
                 </div>
             </details>
             <div class="filter-tags">
-                <span class="filter-tags-label">適用中のフィルター：</span>
                 <span class="filter-tag">外回り</span>
                 <span class="filter-tag">既存（農耕）</span>
                 <span class="filter-tag">B2B</span>
@@ -160,6 +132,119 @@
                                     <span class="spectrum-value">高額・コンサル</span>
                                 </div>
                             </div>
+                            <div class="spectrum-hidden-items">
+                                <div class="spectrum-category">働き方</div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">外勤／内勤</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 85%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">外回り中心</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">エリア</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 25%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">地域密着</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">個人／チーム</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 35%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">個人主体</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">分業／一気通貫</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 80%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">導入後サポートまで</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">型／裁量</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 72%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">自由度高い</span>
+                                </div>
+                                <div class="spectrum-category">営業難易度</div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">営業サイクル</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 70%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">長期提案</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">提案深度</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 88%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">課題提案型</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">商材特性</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 75%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">無形商材</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">顧客属性</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 90%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">法人顧客</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">価格裁量</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 60%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">価格交渉可能</span>
+                                </div>
+                                <div class="spectrum-category">顧客獲得スタイル</div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">新規／既存</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 78%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">ファーミング</span>
+                                </div>
+                                <div class="spectrum-item">
+                                    <span class="spectrum-label">アプローチ</span>
+                                    <div class="spectrum-bar-wrap">
+                                        <div class="spectrum-bar">
+                                            <div class="spectrum-dot" style="left: 65%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="spectrum-value">インバウンド</span>
+                                </div>
+                            </div>
                         </div>
                         <p class="job-card-desc">
                             当社は、長野県の東信・中信地域を中心に、地元の企業や商店の経営者の皆さんから"経営の悩み"をうかがい、ITを使ってそれを解決したり、解決を支援したりするサービスを提供しています。
@@ -173,5 +258,21 @@
 
         </div>
     </main>
+    <script>
+        document.querySelectorAll('.spectrum-more-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var card = btn.closest('.job-card');
+                var isExpanded = card.classList.toggle('expanded');
+                var icon = btn.querySelector('.material-symbols-outlined');
+                if (isExpanded) {
+                    btn.childNodes[0].textContent = '閉じる ';
+                    icon.textContent = 'expand_less';
+                } else {
+                    btn.childNodes[0].textContent = '残り12項目を表示 ';
+                    icon.textContent = 'expand_more';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
