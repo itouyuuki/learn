@@ -160,7 +160,8 @@ img {
    フィルターセクション
    ========================================================================== */
 .filter-section {
-    background-color: #fff;
+    background-color: #3c5da8;
+    border-radius: 16px;
 }
 
 .filter-card {
@@ -212,11 +213,13 @@ details[open] > .filter-summary .filter-chevron {
 /* フィルター本体 */
 .filter-body {
     padding: 0 16px 20px;
+    background-color: white;
 }
 
 /* カテゴリーグループ */
 .filter-group {
     margin-bottom: 24px;
+    padding-top:
 }
 
 .filter-group:last-of-type {
@@ -348,7 +351,9 @@ details[open] > .filter-summary .filter-chevron {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 12px;
+    background-color: #3c5da8;
+    border-radius: 16px;
+    padding: 10px;
 }
 
 .filter-tag {
@@ -356,9 +361,9 @@ details[open] > .filter-summary .filter-chevron {
     font-size: 14px;
     align-items: center;
     gap: 6px;
-    padding: 6px 12px;
-    background-color: #3c5da8;
-    color: #fff;
+    padding: 3px 12px;
+    background-color: white;
+    color: #3c5da8;
     border-radius: 9999px;
     font-size: 11px;
     font-weight: 700;
@@ -371,6 +376,11 @@ details[open] > .filter-summary .filter-chevron {
 
 .filter-tag:hover {
     opacity: 0.9;
+}
+
+/* フィルタータグのアイコン */
+.filter-tag-icon {
+    font-size: 14px;
 }
 
 /* Material Icons のデフォルトスタイルをリセット */
