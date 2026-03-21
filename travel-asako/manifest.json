@@ -1,0 +1,21 @@
+{
+  "name": "旅のしおり",
+  "short_name": "しおり",
+  "start_url": "./home.html",
+  "display": "standalone",
+  "background_color": "#f8f6f5",
+  "theme_color": "#ff8a70",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "images/pwa.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/pwa.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

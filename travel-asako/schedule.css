@@ -1,0 +1,284 @@
+/* ===========================
+   ヘッダー
+   =========================== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    padding-bottom: 8px;
+}
+
+.header__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--color-primary);
+    font-size: 28px;
+}
+
+.header__title {
+    flex: 1;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+    padding-right: 48px;
+}
+
+
+/* ===========================
+   日付タブ
+   =========================== */
+.day-tabs {
+    display: flex;
+    gap: 24px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--color-border);
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.day-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.day-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0 12px;
+    border-bottom: 3px solid transparent;
+    color: var(--color-text-sub);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.day-tab--active {
+    border-bottom-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.day-tab__name {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.day-tab__date {
+    font-size: 10px;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+
+/* ===========================
+   スケジュールコンテンツ
+   =========================== */
+.schedule-content {
+    padding: 24px 16px 0;
+}
+
+.schedule-content__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.schedule-content__date {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+
+/* ===========================
+   タイムライン
+   =========================== */
+.timeline {
+    position: relative;
+}
+
+.timeline__line {
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background-color: #e2e8f0;
+}
+
+.timeline__item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0 16px;
+    margin-bottom: 32px;
+}
+
+.timeline__item--past {
+    opacity: 0.5;
+}
+
+.timeline__icon-col {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e2e8f0;
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 0 4px var(--color-bg);
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+.timeline__icon-wrap--active {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(255, 138, 112, 0.2);
+    color: #ffffff;
+}
+
+.timeline__icon-wrap--active .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.timeline__card {
+    background-color: var(--color-surface);
+    border: 1px solid #f1f5f9;
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline__card--active {
+    border: 2px solid var(--color-primary);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline__card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.timeline__event-title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.timeline__event-title--active {
+    font-size: 17px;
+}
+
+.timeline__status-badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-sub);
+}
+
+.timeline__event-note {
+    font-size: 13px;
+    font-weight: 300;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.timeline__active-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-bottom-left-radius: var(--radius-sm);
+    letter-spacing: 0.05em;
+}
+
+.timeline__weather-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline__weather-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+}
+
+.timeline__weather-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline__weather-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+}
+
+.timeline__weather-value {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 次の予定（薄め表示） */
+.timeline__upcoming .timeline__card {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 4px;
+}
+
+.timeline__upcoming .timeline__event-title {
+    color: var(--color-text-sub);
+    font-weight: 500;
+}
+
+.timeline__upcoming-hint {
+    font-size: 11px;
+    color: var(--color-text-sub);
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 2px;
+}

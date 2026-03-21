@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#ff8a70">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link rel="manifest" href="manifest.json">
+        <title>スケジュール - 旅のしおり</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="common.css" />
+        <link rel="stylesheet" href="schedule.css" />
+    </head>
+    <body id="page-schedule">
+        <div class="page-wrapper">
+
+            <!-- ヘッダー -->
+            <header class="header">
+                <div class="header__inner">
+                    <div class="header__icon">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                    </div>
+                    <h2 class="header__title">旅行のスケジュール</h2>
+                </div>
+
+                <!-- 日付タブ -->
+                <div class="day-tabs" id="day-tabs">
+                    <a class="day-tab day-tab--active" href="#day-1">
+                        <span class="day-tab__name">1日目</span>
+                        <span class="day-tab__date">7月15日</span>
+                    </a>
+                    <a class="day-tab" href="#day-2">
+                        <span class="day-tab__name">2日目</span>
+                        <span class="day-tab__date">7月16日</span>
+                    </a>
+                    <a class="day-tab" href="#day-3">
+                        <span class="day-tab__name">3日目</span>
+                        <span class="day-tab__date">7月17日</span>
+                    </a>
+                </div>
+            </header>
+
+            <main>
+                <div class="schedule-content" id="timeline-container">
+
+                    <!-- 日付ヘッダー -->
+                    <div class="schedule-content__header">
+                        <h3 class="schedule-content__date">7月15日 月曜日</h3>
+                        <span class="badge badge--primary">3つの予定</span>
+                    </div>
+
+                    <!-- タイムライン -->
+                    <div class="timeline">
+                        <div class="timeline__line"></div>
+
+                        <!-- イベント1：完了済み -->
+                        <div class="timeline__item timeline__item--past">
+                            <div class="timeline__icon-col">
+                                <div class="timeline__icon-wrap">
+                                    <span class="material-symbols-outlined">directions_bus</span>
+                                </div>
+                            </div>
+                            <div class="timeline__card">
+                                <div class="timeline__card-header">
+                                    <p class="timeline__event-title">09:00 出発</p>
+                                    <span class="timeline__status-badge">完了</span>
+                                </div>
+                                <p class="timeline__event-note">中央駅改札口 • 出発の準備完了！</p>
+                            </div>
+                        </div>
+
+                        <!-- イベント2：完了済み -->
+                        <div class="timeline__item timeline__item--past">
+                            <div class="timeline__icon-col">
+                                <div class="timeline__icon-wrap">
+                                    <span class="material-symbols-outlined">restaurant</span>
+                                </div>
+                            </div>
+                            <div class="timeline__card">
+                                <div class="timeline__card-header">
+                                    <p class="timeline__event-title">11:30 ランチ</p>
+                                    <span class="timeline__status-badge">完了</span>
+                                </div>
+                                <p class="timeline__event-note">地元のラーメン屋 • 家族のお気に入り</p>
+                            </div>
+                        </div>
+
+                        <!-- イベント3：現在進行中 -->
+                        <div class="timeline__item">
+                            <div class="timeline__icon-col">
+                                <div class="timeline__icon-wrap timeline__icon-wrap--active">
+                                    <span class="material-symbols-outlined">beach_access</span>
+                                </div>
+                            </div>
+                            <div class="timeline__card timeline__card--active">
+                                <div class="timeline__active-badge">現在進行中</div>
+                                <div class="timeline__card-header">
+                                    <p class="timeline__event-title timeline__event-title--active">
+                                        14:00 海水浴タイム
+                                    </p>
+                                </div>
+                                <p class="timeline__event-note">
+                                    サニーベイ・ビーチ • 泳いだり日光浴したり
+                                </p>
+                                <div class="timeline__weather-row">
+                                    <img
+                                        class="timeline__weather-thumb"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJNdZkoMYM5VBMBLb1kO-Ybs-Z6N0wZujD9-X9Pm3Oxm0NtrVebHtUyeMLWBR4g9WmOO97GjJqS4jlhAKqjYyFmmlM1wn6eW5ICDzn3vmWZQkXJRAjgdHBnsXl3o6_Y90VUcREpUMiXYykz5WfSEpN2CPfuVFrH3pMKAEP2odF_ba4-WhUQG-Q22i-TDalOVTkre9YHDCz9j_8j-Z02ivx3bbb3uvEsaclmQZ5Ewl5I5YHrqfivagMcmTYHs8ddNvDatFFB6rqPoSY"
+                                        alt="快晴の青い海が広がるビーチ"
+                                    />
+                                    <div class="timeline__weather-info">
+                                        <span class="timeline__weather-label">現在の天気</span>
+                                        <span class="timeline__weather-value">快晴 28°C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 次の予定（薄め表示） -->
+                        <div class="timeline__item timeline__upcoming">
+                            <div class="timeline__icon-col">
+                                <div class="timeline__icon-wrap">
+                                    <span class="material-symbols-outlined">hotel</span>
+                                </div>
+                            </div>
+                            <div class="timeline__card">
+                                <p class="timeline__event-title">19:00 チェックイン</p>
+                                <p class="timeline__upcoming-hint">これからの予定</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+
+            <!-- ボトムナビゲーション -->
+            <nav class="bottom-nav">
+                <a class="bottom-nav__item" href="home.html">
+                    <div class="bottom-nav__icon">
+                        <span class="material-symbols-outlined">home</span>
+                    </div>
+                    <span class="bottom-nav__label">ホーム</span>
+                </a>
+                <a class="bottom-nav__item bottom-nav__item--active" href="schedule.html" aria-current="page">
+                    <div class="bottom-nav__icon">
+                        <span class="material-symbols-outlined filled">calendar_month</span>
+                    </div>
+                    <span class="bottom-nav__label">予定</span>
+                </a>
+                <a class="bottom-nav__item" href="seat.html">
+                    <div class="bottom-nav__icon">
+                        <span class="material-symbols-outlined">airline_seat_recline_normal</span>
+                    </div>
+                    <span class="bottom-nav__label">座席くじ</span>
+                </a>
+            </nav>
+
+        </div>
+        <script src="app.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js');
+            }
+        </script>
+    </body>
+</html>

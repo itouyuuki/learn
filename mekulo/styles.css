@@ -1,0 +1,1079 @@
+/* ============================================
+   基本スタイル - Base Styles
+   ============================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #fdfdfb;
+    color: #334155;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   カラーパレット - Color Palette
+   ============================================ */
+
+:root {
+    --mekulo: #3C5DA8;
+    --mekulo-dark: #2d477f;
+    --mekulo-light: #eef2f9;
+    --offwhite: #fdfdfb;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+}
+
+/* ============================================
+   レイアウト - Layout
+   ============================================ */
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* ============================================
+   サイドバー - Sidebar
+   ============================================ */
+
+.sidebar {
+    width: 256px;
+    background-color: #ffffff;
+    border-right: 1px solid var(--slate-200);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+}
+
+.sidebar-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--mekulo);
+    margin: 0 0 0.5rem 0;
+}
+
+.sidebar-subtitle {
+    font-size: 0.75rem;
+    color: var(--slate-500);
+    line-height: 1.5;
+}
+
+.sidebar-nav {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.625rem 1rem;
+    border-radius: 0.375rem;
+    color: var(--slate-700);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: var(--slate-50);
+}
+
+.sidebar-link.active {
+    color: var(--mekulo);
+    font-weight: 700;
+    border-left: 4px solid var(--mekulo);
+    background-color: var(--mekulo-light);
+}
+
+/* ============================================
+   メインコンテンツ - Main Content
+   ============================================ */
+
+.main-content {
+    width: 100%;
+    max-width: 80rem;
+    padding: 3rem;
+}
+
+.main-content section {
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+    scroll-margin-top: 2.5rem;
+}
+
+/* ============================================
+   見出し - Headings
+   ============================================ */
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    border-bottom: 4px solid var(--mekulo);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--slate-800);
+}
+
+.demo-box {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--slate-100);
+}
+
+.demo-box.space-y > * + * {
+    margin-top: 2rem;
+}
+
+.demo-box.space-y-6 > * + * {
+    margin-top: 1.5rem;
+}
+
+.demo-box.space-y-8 > * + * {
+    margin-top: 2rem;
+}
+
+.demo-box.space-y-12 > * + * {
+    margin-top: 3rem;
+}
+
+.demo-box.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* h2 見出し */
+.heading-h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--slate-800);
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.heading-h2::before {
+    content: "";
+    width: 0.5rem;
+    height: 2rem;
+    background-color: var(--mekulo);
+    margin-right: 0.75rem;
+    border-radius: 9999px;
+}
+
+/* h3 見出し */
+.heading-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--slate-800);
+    border-left: 4px solid var(--mekulo);
+    padding-left: 1rem;
+    margin: 0;
+}
+
+/* h4 見出し */
+.heading-h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--mekulo);
+    text-decoration: underline;
+    text-underline-offset: 2rem;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(60, 93, 168, 0.3);
+    margin: 0;
+}
+
+.label-text {
+    font-size: 0.9rem;
+    color: var(--slate-800);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   テキストスタイル - Text Styles
+   ============================================ */
+
+.text-paragraph {
+    line-height: 1.75;
+}
+
+.text-bold {
+    font-weight: 700;
+    color: var(--slate-900);
+}
+
+.text-link {
+    color: var(--mekulo);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.text-link:hover {
+    color: var(--mekulo-dark);
+}
+
+blockquote {
+    border-left: 4px solid var(--slate-200);
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-style: italic;
+    color: var(--slate-600);
+    background-color: var(--slate-50);
+    border-radius: 0 0.375rem 0.375rem 0;
+    margin: 0;
+}
+
+/* ============================================
+   リスト - Lists
+   ============================================ */
+
+.list-label {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--slate-700);
+}
+
+.unordered-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.unordered-list li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.unordered-list li + li {
+    margin-top: 0.5rem;
+}
+
+.unordered-list li::before {
+    content: "●";
+    color: var(--mekulo);
+    margin-right: 0.5rem;
+}
+
+.ordered-list {
+    padding-left: 1.5rem;
+    margin: 0;
+    color: var(--slate-600);
+}
+
+.ordered-list li + li {
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   メッセージボックス - Message Boxes
+   ============================================ */
+
+.message-box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.message-box + .message-box {
+    margin-top: 1rem;
+}
+
+.message-box.important {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.message-box.important .message-label {
+    color: #dc2626;
+}
+
+.message-box.important .message-text {
+    color: #991b1b;
+}
+
+.message-box.warning {
+    background-color: #fffbeb;
+    border: 1px solid #fed7aa;
+}
+
+.message-box.warning .message-label {
+    color: #ea580c;
+}
+
+.message-box.warning .message-text {
+    color: #9a3412;
+}
+
+.message-box.info {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.message-box.info .message-label {
+    color: #2563eb;
+}
+
+.message-box.info .message-text {
+    color: #1e40af;
+}
+
+.message-box.success {
+    background-color: rgba(60, 93, 168, 0.1);
+    border: 1px solid rgba(60, 93, 168, 0.3);
+}
+
+.message-box.success .message-label {
+    color: var(--mekulo);
+}
+
+.message-box.success .message-text {
+    color: var(--mekulo-dark);
+}
+
+.message-label {
+    margin-right: 0.75rem;
+    margin-top: 0.125rem;
+    font-weight: 700;
+    min-width: 360px;
+}
+
+.message-text {
+    font-size: 0.875rem;
+}
+
+/* ============================================
+   バッジ・タグ - Badges & Tags
+   ============================================ */
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.badge.important {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.badge.maintenance {
+    background-color: var(--slate-600);
+    color: #ffffff;
+}
+
+.badge.new-feature {
+    background-color: var(--mekulo);
+    color: #ffffff;
+}
+
+.badge.campaign {
+    background-color: #f59e0b;
+    color: #ffffff;
+}
+
+.badge.accepting {
+    border: 1px solid var(--mekulo);
+    color: var(--mekulo);
+    background-color: transparent;
+}
+
+.badge.notice {
+    background-color: var(--slate-100);
+    color: var(--slate-500);
+}
+
+/* ============================================
+   メタ情報 - Meta Info
+   ============================================ */
+
+.meta-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--slate-500);
+    font-size: 0.875rem;
+}
+
+.meta-icon {
+    display: flex;
+    align-items: center;
+}
+
+.meta-icon svg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
+.meta-badge {
+    padding: 0.125rem 0.5rem;
+    background-color: rgba(60, 93, 168, 0.1);
+    color: var(--mekulo);
+    font-size: 0.625rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(60, 93, 168, 0.2);
+}
+
+.meta-update {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+.meta-update .label {
+    font-size: 0.625rem;
+    margin-right: 0.25rem;
+}
+
+/* ============================================
+   区切り線 - Dividers
+   ============================================ */
+
+.divider-section {
+    padding: 0.5rem 0;
+}
+
+.divider-label {
+    font-size: 0.75rem;
+    color: var(--slate-400);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.divider-standard {
+    border: none;
+    border-top: 1px solid var(--slate-200);
+    margin: 0;
+}
+
+.divider-gradient {
+    height: 0.25rem;
+    width: 100%;
+    background: linear-gradient(to right, var(--mekulo), rgba(60, 93, 168, 0.4), transparent);
+    border-radius: 9999px;
+}
+
+/* ============================================
+   テーブル - Tables
+   ============================================ */
+
+.table-wrapper {
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 1px solid var(--slate-200);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.data-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.data-table thead {
+    background-color: var(--slate-50);
+    border-bottom: 1px solid var(--slate-200);
+}
+
+.data-table th {
+    padding: 1rem;
+    font-weight: 700;
+    color: var(--slate-700);
+}
+
+.data-table th.highlight {
+    color: var(--mekulo);
+}
+
+.data-table tbody {
+    background-color: #ffffff;
+}
+
+.data-table tr {
+    border-bottom: 1px solid var(--slate-100);
+}
+
+.data-table tr:last-child {
+    border-bottom: none;
+}
+
+.data-table td {
+    padding: 1rem;
+}
+
+.data-table td.label {
+    color: var(--slate-600);
+    font-weight: 500;
+}
+
+.data-table td.old-value {
+    color: var(--slate-400);
+    text-decoration: line-through;
+}
+
+.data-table td.new-value {
+    color: var(--slate-900);
+    font-weight: 700;
+}
+
+.data-table .unit {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+/* ============================================
+   手順ステップ - Steps
+   ============================================ */
+
+.steps-container {
+    position: relative;
+}
+
+.step-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.step-item:last-child {
+    margin-bottom: 0;
+}
+
+.step-line {
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--slate-200);
+    z-index: 0;
+}
+
+.step-item:last-child .step-line {
+    display: none;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background-color: var(--mekulo);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    z-index: 10;
+    position: relative;
+}
+
+.step-content {
+    margin-left: 1.5rem;
+}
+
+.step-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: var(--slate-800);
+}
+
+.step-description {
+    font-size: 0.875rem;
+    color: var(--slate-500);
+    margin: 0;
+}
+
+/* ============================================
+   アコーディオン - Accordion
+   ============================================ */
+
+.accordion-item {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--slate-100);
+    overflow: hidden;
+}
+
+.accordion-item + .accordion-item {
+    margin-top: 0.75rem;
+}
+
+.accordion-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-question {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.accordion-question .q-mark {
+    color: var(--mekulo);
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.accordion-icon {
+    transition: transform 0.2s;
+}
+
+.accordion-item[open] .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-icon svg {
+    display: block;
+}
+
+.accordion-answer {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    display: flex;
+}
+
+.accordion-answer .a-mark {
+    color: #ef4444;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    font-weight: 700;
+}
+
+.accordion-answer p {
+    color: var(--slate-600);
+    margin: 0;
+}
+
+/* ============================================
+   ファイルダウンロード - File Downloads
+   ============================================ */
+
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.file-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--slate-100);
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
+}
+
+.file-link:hover {
+    background-color: var(--slate-50);
+}
+
+.file-link:hover .download-icon {
+    color: var(--mekulo);
+}
+
+.file-icon {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.file-icon.pdf {
+    background-color: #fef2f2;
+    color: #ef4444;
+}
+
+.file-icon.doc {
+    background-color: #eff6ff;
+    color: #3b82f6;
+}
+
+.file-icon svg {
+    display: block;
+}
+
+.file-info {
+    flex: 1;
+}
+
+.file-name {
+    display: block;
+    font-weight: 700;
+    color: var(--slate-800);
+}
+
+.file-meta {
+    font-size: 0.75rem;
+    color: var(--slate-400);
+}
+
+.download-icon {
+    color: var(--slate-300);
+    transition: color 0.2s;
+}
+
+.download-icon svg {
+    display: block;
+}
+
+/* ============================================
+   画像とキャプション - Images
+   ============================================ */
+
+.image-figure {
+    margin: 0 auto;
+    max-width: 32rem;
+}
+
+.image-figure img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.75rem;
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--slate-500);
+    font-style: italic;
+}
+
+/* 複数画像グリッド（2x2） */
+.image-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.image-grid-2x2 .image-figure {
+    max-width: 100%;
+}
+
+/* ============================================
+   ボタン - Buttons
+   ============================================ */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.button-item {
+    text-align: center;
+}
+
+.button-label {
+    font-size: 0.75rem;
+    color: var(--slate-400);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+/* プライマリボタン */
+.btn-primary {
+    padding: 0.75rem 2rem;
+    background-color: var(--mekulo);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: var(--mekulo-dark);
+}
+
+/* アウトラインボタン */
+.btn-outline {
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    color: var(--mekulo);
+    font-weight: 700;
+    border-radius: 9999px;
+    border: 2px solid var(--mekulo);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-outline:hover {
+    background-color: rgba(60, 93, 168, 0.05);
+}
+
+/* テキストボタン */
+.btn-text {
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    color: var(--slate-600);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-text:hover {
+    color: var(--mekulo);
+}
+
+/* 警告ボタン */
+.btn-warning {
+    padding: 0.75rem 1.5rem;
+    background-color: #fecaca;
+    color: #dc2626;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-warning:hover {
+    background-color: #fca5a5;
+}
+
+/* ============================================
+   フッター - Footer
+   ============================================ */
+
+.page-footer {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--slate-200);
+    text-align: center;
+    color: var(--slate-400);
+    font-size: 0.875rem;
+}
+
+/* ============================================
+   ユーティリティ - Utilities
+   ============================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.gap-3 {
+    gap: 0.75rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+/* ============================================
+   印刷用スタイル - Print Styles
+   ============================================ */
+
+@media print {
+    /* 背景色と画像を印刷する設定 */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* ページ設定 */
+    @page {
+        margin: 2cm;
+        size: A4;
+    }
+
+    /* ボディ設定 */
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+
+    /* メインコンテンツ */
+    .main-content {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* セクション単位で改ページ防止 */
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 見出しの直後で改ページ防止 */
+    h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    /* 画像の直前で改ページ防止 */
+    img, figure, .image-figure {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* デモボックス */
+    .demo-box {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* 画像グリッドの印刷対応 */
+    .image-grid-2x2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .image-grid-2x2 .image-figure {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .image-grid-2x2 img {
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* 単一画像 */
+    .image-figure {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .image-figure img {
+        max-height: 300px;
+        width: auto;
+    }
+
+    /* アコーディオンは全て開いた状態で印刷 */
+    details {
+        display: block !important;
+    }
+
+    details[open] summary {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    details summary .accordion-icon {
+        display: none;
+    }
+
+    /* ステップコンテナ */
+    .steps-container {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .step-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
+    }
+
+    /* リンクのURLを表示 */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* メッセージボックス */
+    .message-box {
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* テーブル */
+    .table-wrapper {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .data-table {
+        font-size: 10pt;
+    }
+
+    /* バッジ */
+    .badge {
+        border: 1px solid #000;
+    }
+}

@@ -1,0 +1,168 @@
+{
+  "title": "家族で夏休み旅行 2026",
+  "dates": "3月16日〜18日",
+  "hero_image": "images/kazoku.jpg",
+  "destination": {
+    "name": "栃木県・那須高原巡り",
+    "lat": 36.92,
+    "lon": 139.87
+  },
+  "days": [
+    {
+      "day": 1,
+      "label": "1日目",
+      "date": "2026-03-16",
+      "events": [
+        {
+          "time": "05:00",
+          "name": "松陰塾 出発",
+          "icon": "directions_bus",
+          "note": "松陰塾 • 旅行開始！",
+          "lat": 35.7083,
+          "lon": 140.4667,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=松陰塾旭校舎"
+        },
+        {
+          "time": "09:00",
+          "name": "道の駅 かさま",
+          "icon": "restaurant",
+          "note": "道の駅 かさま • 休憩",
+          "lat": 36.3819,
+          "lon": 140.2754,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=道の駅かさま"
+        },
+        {
+          "time": "10:30",
+          "name": "こばや食堂",
+          "icon": "ramen_dining",
+          "note": "こばや食堂（スープ焼きそば） • 那須塩原市塩原795",
+          "lat": 37.0500,
+          "lon": 140.0833,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=こばや食堂那須塩原"
+        },
+        {
+          "time": "14:00",
+          "name": "陶芸体験",
+          "icon": "pottery",
+          "note": "陶芸体験（亀工房にて） • 体験工作",
+          "lat": 37.0000,
+          "lon": 140.0167,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=那須亀公房"
+        },
+        {
+          "time": "16:10",
+          "name": "チェックイン",
+          "icon": "hotel",
+          "note": "リブマックスリゾート那須高原 • ホテル到着",
+          "lat": 36.9500,
+          "lon": 139.9167,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=リブマックスリゾート那須高原"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "label": "2日目",
+      "date": "2026-03-17",
+      "events": [
+        {
+          "time": "08:00",
+          "name": "ホテル出発",
+          "icon": "free_breakfast",
+          "note": "ホテル出発",
+          "lat": 36.9500,
+          "lon": 139.9167,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=リブマックスリゾート那須高原"
+        },
+        {
+          "time": "08:00",
+          "name": "那須高原南が丘牧場",
+          "icon": "museum",
+          "note": "釣り堀・アーチェリー・モルモットふれあい等",
+          "lat": 37.0500,
+          "lon": 140.0500,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=那須高原南が丘牧場"
+        },
+        {
+          "time": "11:00",
+          "name": "ランチ",
+          "icon": "restaurant",
+          "note": "森のおばあちゃん食堂",
+          "lat": 36.9500,
+          "lon": 139.9000,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=森のおばあちゃん食堂"
+        },
+        {
+          "time": "13:00",
+          "name": "那須バギーパーク",
+          "icon": "shopping_bag",
+          "note": "セグウェイをみんなでやりましょうや",
+          "lat": 36.8800,
+          "lon": 139.9300,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=那須バギーパーク"
+        },
+        {
+          "time": "16:00",
+          "name": "ホテル到着 亀の井ホテル喜連川",
+          "icon": "restaurant",
+          "note": "亀の井ホテル喜連川 • 温泉でゆっくり",
+          "lat": 36.9200,
+          "lon": 139.8700,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=亀の井ホテル喜連川"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "label": "3日目",
+      "date": "2026-03-18",
+      "events": [
+        {
+          "time": "09:00",
+          "name": "ホテル出発",
+          "icon": "free_breakfast",
+          "note": "ホテル出発",
+          "lat": 36.9200,
+          "lon": 139.8700,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=亀の井ホテル喜連川"
+        },
+        {
+          "time": "09:20",
+          "name": "氏家ゆうゆうパーク",
+          "icon": "hot_tub",
+          "note": "足湯体験 • 美肌の湯",
+          "lat": 36.9000,
+          "lon": 139.8500,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=氏家ゆうゆうパーク"
+        },
+        {
+          "time": "11:00",
+          "name": "宇都宮みんみん宿郷店",
+          "icon": "restaurant",
+          "note": "宇都宮みんみん宿郷店",
+          "lat": 36.5500,
+          "lon": 139.8800,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=宇都宮みんみん宿郷店"
+        },
+        {
+          "time": "13:00",
+          "name": "道の駅 常総",
+          "icon": "home",
+          "note": "道の駅常総 • 休憩",
+          "lat": 36.0000,
+          "lon": 139.9000,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=道の駅常総"
+        },
+        {
+          "time": "17:30",
+          "name": "松陰塾旭校舎 到着",
+          "icon": "home",
+          "note": "松陰塾旭校舎 • 授業参加",
+          "lat": 35.7083,
+          "lon": 140.4667,
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=松陰塾旭校舎"
+        }
+      ]
+    }
+  ]
+}

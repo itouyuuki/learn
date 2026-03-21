@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff8a70">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="manifest.json">
+    <title>座席くじ - 旅のしおり</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="seat.css" />
+</head>
+<body id="page-seat">
+    <div class="page-wrapper">
+
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header__inner">
+                <div class="header__icon">
+                    <span class="material-symbols-outlined">airline_seat_recline_normal</span>
+                </div>
+                <h2 class="header__title">座席くじ</h2>
+            </div>
+        </header>
+
+        <main>
+            <!-- くじ引きセクション -->
+            <div class="lottery-section">
+                <div class="lottery-box-wrap">
+                    <div class="lottery-box" id="lottery-box">
+                        <span class="material-symbols-outlined lottery-box__icon">style</span>
+                        <p class="lottery-box__text">座席くじ</p>
+                    </div>
+                </div>
+
+                <div class="draw-info">
+                    <p class="draw-info__title">くじを引こう</p>
+                    <p class="draw-info__desc">ボタンを押してランダムに座席を決定します</p>
+                </div>
+
+                <button class="draw-btn" id="draw-btn">
+                    <span class="material-symbols-outlined">casino</span>
+                    <span>くじを引く</span>
+                </button>
+
+                <!-- 引いた座席の履歴 -->
+                <div class="result-section">
+                    <h3 class="result-section__title">引いた座席</h3>
+                    <div class="result-list" id="result-list">
+                        <!-- JSで動的に生成 -->
+                    </div>
+                    <p class="result-empty" id="result-empty">まだくじを引いていません</p>
+                </div>
+
+                <!-- リセットボタン -->
+                <button class="reset-btn" id="reset-btn">
+                    <span class="material-symbols-outlined">refresh</span>
+                    <span>リセット</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- スロット演出オーバーレイ -->
+        <div class="slot-overlay" id="slot-overlay">
+            <div class="slot-card">
+                <p class="slot-label">あなたの座席は...</p>
+                <p class="slot-text" id="slot-text">?</p>
+                <p class="slot-close-hint">タップして閉じる</p>
+            </div>
+        </div>
+
+        <!-- ボトムナビゲーション -->
+        <nav class="bottom-nav">
+            <a class="bottom-nav__item" href="home.html">
+                <div class="bottom-nav__icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <span class="bottom-nav__label">ホーム</span>
+            </a>
+            <a class="bottom-nav__item" href="schedule.html">
+                <div class="bottom-nav__icon">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                </div>
+                <span class="bottom-nav__label">予定</span>
+            </a>
+            <a class="bottom-nav__item bottom-nav__item--active" href="seat.html" aria-current="page">
+                <div class="bottom-nav__icon">
+                    <span class="material-symbols-outlined filled">airline_seat_recline_normal</span>
+                </div>
+                <span class="bottom-nav__label">座席くじ</span>
+            </a>
+        </nav>
+
+    </div>
+    <script src="seat.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>

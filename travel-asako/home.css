@@ -1,0 +1,418 @@
+/* ===========================
+   ヘッダー
+   =========================== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.header__menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__title {
+    flex: 1;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.header__notify-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__meta {
+    padding: 8px 24px 24px;
+}
+
+.header__badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.header__trip-title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.header__trip-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+
+/* ===========================
+   コンテンツパディング
+   =========================== */
+.content {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* ===========================
+   ヒーロー画像
+   =========================== */
+.hero {
+    padding: 16px 16px 0;
+}
+
+.hero__image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+
+.hero__caption {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    color: #ffffff;
+}
+
+.hero__caption-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.8;
+    margin-bottom: 2px;
+}
+
+.hero__caption-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* ===========================
+   天気カード
+   =========================== */
+.weather-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.weather-card__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #e8f4ff 0%, #d0e8ff 100%);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(0, 150, 255, 0.15);
+    border: 2px solid rgba(0, 150, 255, 0.2);
+    overflow: hidden;
+}
+
+.weather-card__icon-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.weather-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.weather-card__temp {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.weather-card__temp span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text-sub);
+}
+
+.weather-card__sub {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    color: var(--color-text-sub);
+    font-size: 13px;
+}
+
+.weather-card__sub-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* ===========================
+   カウントダウンカード
+   =========================== */
+.countdown-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.countdown-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.countdown-card__event-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.countdown-card__timer-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.countdown-card__timer {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.05em;
+}
+
+.countdown-card__timer-label {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-sub);
+}
+
+.countdown-card__thumbnail {
+    width: 96px;
+    height: 96px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+   GPSカード
+   =========================== */
+.gps-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.gps-card__coords {
+    font-family: monospace;
+    font-size: 10px;
+    color: var(--color-text-sub);
+}
+
+.gps-card__body {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.gps-card__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.gps-card__stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-sub);
+}
+
+.gps-card__stat-value {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.gps-card__divider {
+    width: 1px;
+    height: 40px;
+    background-color: #e2e8f0;
+    flex-shrink: 0;
+}
+
+.gps-card__destination {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.gps-card__dest-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.gps-card__dest-dist {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.gps-card__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary-light);
+    border-radius: var(--radius-full);
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+   マップサムネイル
+   =========================== */
+.map-thumb {
+    padding: 0 16px 8px;
+}
+
+.map-thumb__wrap {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: #e2e8f0;
+}
+
+.map-thumb__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.map-thumb__tint {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 138, 112, 0.1);
+    mix-blend-mode: multiply;
+}
+
+.map-thumb__btn-wrap {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-thumb__btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+}
+
+.map-thumb__btn-icon {
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.map-thumb__btn-text {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1e293b;
+}

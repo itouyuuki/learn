@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#ff8a70">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link rel="manifest" href="manifest.json">
+        <title>家族で夏休み旅行 2026 - 旅のしおり</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="common.css" />
+        <link rel="stylesheet" href="home.css" />
+    </head>
+    <body id="page-home">
+        <div class="page-wrapper">
+
+            <!-- ヘッダー -->
+            <header class="header">
+                <div class="header__inner">
+                    <button class="header__menu-btn" aria-label="メニュー">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <h2 class="header__title">旅のしおり</h2>
+                    <button class="header__notify-btn" aria-label="通知">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                </div>
+                <div class="header__meta">
+                    <div class="header__badge-row">
+                        <span class="badge badge--primary">旅のしおり</span>
+                    </div>
+                    <h1 class="header__trip-title" id="trip-title">家族で夏休み旅行 2026</h1>
+                    <p class="header__trip-date" id="trip-dates">
+                        <span class="material-symbols-outlined" style="font-size: 14px;">calendar_today</span>
+                        8月10日〜12日
+                    </p>
+                </div>
+            </header>
+
+            <main>
+
+                <!-- ヒーロー画像 -->
+                <div class="hero">
+                    <div class="hero__image-wrap">
+                        <div
+                            class="hero__image"
+                            id="hero-image"
+                            style="background-image: url('images/kazoku.jpg');"
+                            role="img"
+                            aria-label="青いターコイズの海とオレンジの夕焼けが広がる南国のビーチ"
+                        ></div>
+                        <div class="hero__overlay"></div>
+                        <div class="hero__caption">
+                            <p class="hero__caption-label">旅行中</p>
+                            <p class="hero__caption-title" id="hero-destination">栃木県・那須高原巡り</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- カード群 -->
+                <div class="content">
+
+                    <!-- 天気カード -->
+                    <div class="card weather-card">
+                        <div class="weather-card__icon-wrap">
+                            <img id="weather-icon" class="weather-card__icon-img" src="https://cdn.amcharts.com/lib/4/images/weather/animated/day.svg" alt="天気アイコン" onerror="this.src='https://cdn.amcharts.com/lib/4/images/weather/animated/day.svg'; console.error('Weather icon load failed')">
+                        </div>
+                        <div class="weather-card__body">
+                            <p class="card__label">天気</p>
+                            <p class="weather-card__temp" id="weather-temp">
+                                31°C
+                                <span id="weather-desc">— 快晴</span>
+                            </p>
+                            <div class="weather-card__sub">
+                                <span class="weather-card__sub-item">
+                                    <span class="material-symbols-outlined" style="font-size: 14px;">water_drop</span>
+                                    <span id="weather-humidity">45%</span>
+                                </span>
+                                <span class="weather-card__sub-item">
+                                    <span class="material-symbols-outlined" style="font-size: 14px;">air</span>
+                                    <span id="weather-wind">5m/s</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 次の予定カード -->
+                    <div class="card countdown-card">
+                        <div class="countdown-card__body">
+                            <p class="card__label">次の予定</p>
+                            <p class="countdown-card__event-name" id="countdown-event">ジェラート休憩</p>
+                            <div class="countdown-card__timer-row">
+                                <span class="countdown-card__timer" id="countdown-timer">00:45:10</span>
+                                <span class="countdown-card__timer-label" id="countdown-label">開始まで</span>
+                            </div>
+                        </div>
+                        <div
+                            class="countdown-card__thumbnail"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDoX5r0tYr_LQjkR67HjAmqS5sFlJ86F5YWbytm1AjFZ4KpNrR0BpV9PClMolwrx-hFytaPB2FWnvAKvPrPOsqNBZsqx0T-eVfZJmUh_S_pEIzTZ14SjICi0pEdD9xx8UFb6jPfGqYmP6aEtOK6MNQSDUQz3avmIdROub54a8bBxtO2kOgqODMeocXAdTKYFtom3Zj7WY5GfSIl1usQe5vDmLUTNV2Z4dS-vDLKKxvcQVc5CxeWFEDeK9GM4JplwZ-pyt_rlwp5I5G');"
+                            role="img"
+                            aria-label="カラフルなフルーツジェラートのコーン"
+                        ></div>
+                    </div>
+
+                    <!-- 現在地・GPSカード -->
+                    <div class="card">
+                        <div class="gps-card__header">
+                            <p class="card__label">現在地</p>
+                            <span class="gps-card__coords" id="gps-coords">35.68, 139.76</span>
+                        </div>
+                        <div class="gps-card__body">
+                            <div class="gps-card__stat">
+                                <span class="gps-card__stat-label">標高</span>
+                                <span class="gps-card__stat-value" id="gps-altitude">50m</span>
+                            </div>
+                            <div class="gps-card__divider"></div>
+                            <div class="gps-card__destination">
+                                <span class="gps-card__stat-label">次の目的地</span>
+                                <span class="gps-card__dest-name" id="gps-dest-name">ビーチ</span>
+                                <span class="gps-card__dest-dist" id="gps-distance">約 1.5km</span>
+                            </div>
+                            <div class="gps-card__nav-btn">
+                                <span class="material-symbols-outlined">near_me</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- マップサムネイル -->
+                <div class="map-thumb">
+                    <div class="map-thumb__wrap">
+                        <div
+                            class="map-thumb__image"
+                            id="map-image"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvL9sPFK5xaXCVUpBV-eKhrxrZw1Afe8Yw2TIpzBvdABZuM67LNQQlk_OK1taNUXLzIFuJZ9w4YbwVJ78P6GDfESemJxyXp461KMmp3UtC3YpG5pRHHFTT1lLBiOce1rHi6pXBOntpBQ-YST1hlPudzpvf-W5ZObRfw97KgZRzX29VxJfOwL8VAfdySx-M4flEQgPedLf1da8-j2OMBCrCC2yTLUEdoLotGH-lnqYSBup6Zawp4xkXS6cNaUk-ykgxt5XSXULBs8Fv');"
+                            role="img"
+                            aria-label="沿岸エリアのスタイライズされた地図"
+                        ></div>
+                        <div class="map-thumb__tint"></div>
+                        <div class="map-thumb__btn-wrap">
+                            <a href="#" id="map-btn" class="map-thumb__btn" target="_blank" rel="noopener">
+                                <span class="material-symbols-outlined map-thumb__btn-icon">map</span>
+                                <span class="map-thumb__btn-text">地図を全画面で見る</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- ボトムナビゲーション -->
+            <nav class="bottom-nav">
+                <a class="bottom-nav__item bottom-nav__item--active" href="home.html" aria-current="page">
+                    <div class="bottom-nav__icon">
+                        <span class="material-symbols-outlined filled">home</span>
+                    </div>
+                    <span class="bottom-nav__label">ホーム</span>
+                </a>
+                <a class="bottom-nav__item" href="schedule.html">
+                    <div class="bottom-nav__icon">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                    </div>
+                    <span class="bottom-nav__label">予定</span>
+                </a>
+                <a class="bottom-nav__item" href="seat.html">
+                    <div class="bottom-nav__icon">
+                        <span class="material-symbols-outlined">airline_seat_recline_normal</span>
+                    </div>
+                    <span class="bottom-nav__label">座席くじ</span>
+                </a>
+            </nav>
+
+        </div>
+        <script src="app.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js');
+            }
+        </script>
+    </body>
+</html>

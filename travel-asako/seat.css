@@ -1,0 +1,314 @@
+/* ===========================
+   ヘッダー
+   =========================== */
+.header {
+    padding: 16px 20px 12px;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__icon {
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary-light);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 24px;
+}
+
+.header__title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* ===========================
+   くじ引きセクション
+   =========================== */
+.lottery-section {
+    padding: 24px 16px;
+}
+
+.lottery-box-wrap {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 24px;
+}
+
+/* 背景の傾いたカード2枚 */
+.lottery-box-wrap::before,
+.lottery-box-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+}
+.lottery-box-wrap::before {
+    background: var(--color-primary-mid);
+    transform: rotate(6deg);
+}
+.lottery-box-wrap::after {
+    background: var(--color-primary-light);
+    transform: rotate(-3deg);
+}
+
+.lottery-box {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border: 2px solid var(--color-primary);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.lottery-box__icon {
+    font-size: 48px;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.lottery-box__text {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* シェイクアニメーション */
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    15%       { transform: rotate(-8deg); }
+    30%       { transform: rotate(8deg); }
+    45%       { transform: rotate(-6deg); }
+    60%       { transform: rotate(6deg); }
+    75%       { transform: rotate(-3deg); }
+    90%       { transform: rotate(3deg); }
+}
+
+.lottery-box--shaking {
+    animation: shake 0.5s ease;
+}
+
+.draw-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.draw-info__title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.draw-info__desc {
+    font-size: 13px;
+    color: var(--color-text-sub);
+}
+
+.draw-btn {
+    width: 100%;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 16px;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(255, 138, 112, 0.35);
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.draw-btn:active {
+    transform: scale(0.97);
+}
+
+.draw-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ===========================
+   結果セクション
+   =========================== */
+.result-section {
+    margin-top: 32px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.result-section__title {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-sub);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8f6f5;
+    border-radius: 0.75rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.result-item__number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.result-item__seat {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.result-empty {
+    text-align: center;
+    color: var(--color-text-sub);
+    font-size: 13px;
+    padding: 20px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   リセットボタン
+   =========================== */
+.reset-btn {
+    width: 100%;
+    background: #f1f5f9;
+    color: var(--color-text-sub);
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+    transition: background 0.2s;
+}
+
+.reset-btn:active {
+    background: #e2e8f0;
+}
+
+/* ===========================
+   スロット演出オーバーレイ
+   =========================== */
+/* 全画面オーバーレイ */
+.slot-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.slot-overlay--visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.slot-card {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 40px 48px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+/* スロットテキスト（高速スクロール中） */
+.slot-text {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    min-width: 200px;
+    text-align: center;
+    transition: none;
+}
+
+/* 結果確定時のバウンスイン */
+@keyframes bounceIn {
+    0%   { transform: scale(0.5); opacity: 0; }
+    60%  { transform: scale(1.15); opacity: 1; }
+    80%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.slot-text--result {
+    animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.slot-label {
+    font-size: 13px;
+    color: var(--color-text-sub);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+}
+
+.slot-close-hint {
+    font-size: 11px;
+    color: var(--color-text-sub);
+    margin-top: 20px;
+}
