@@ -1,0 +1,24 @@
+{
+  "company": "ネクストリザベーション株式会社",
+  "title": "戦略提案営業",
+  "tags": ["クラウド・インフラ", "外資系SaaS"],
+  "image": "nextreservation/photo1.jpg",
+  "url": "#",
+  "description": "当社は、長野県の東信・中信地域を中心に、地元の企業や商店の経営者の皆さんから「経営の悩み」をうかがい、ITを使ってそれを解決したり、解決を支援したりするサービスを提供しています。",
+  "spectrums": {
+    "work_location":    { "value": 90 },
+    "approach":         { "value": 80 },
+    "customer_type":    { "value": 90 },
+    "new_existing":     { "value": 80 },
+    "inbound_outbound": { "value": 60 },
+    "price":            { "value": 80 },
+    "sales_cycle":      { "value": 70 },
+    "proposal_depth":   { "value": 90 },
+    "product_type":     { "value": 80 },
+    "price_authority":  { "value": 60 },
+    "territory":        { "value": 20 },
+    "team_style":       { "value": 30 },
+    "coverage":         { "value": 80 },
+    "autonomy":         { "value": 70 }
+  }
+}

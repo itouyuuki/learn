@@ -957,7 +957,7 @@ details[open] > .filter-summary .filter-chevron {
 
     .job-card-image {
         grid-column: 1;
-        grid-row: 1 / 4;
+        grid-row: 1 / 3;
         aspect-ratio: auto;
         width: 256px;
         height: 256px;
@@ -1033,7 +1033,7 @@ details[open] > .filter-summary .filter-chevron {
     }
 
     .spectrum-section {
-        grid-column: 2;
+        grid-column: 1 / -1;
         grid-row: 3;
         background-color: #f8fafc;
         border-radius: 24px;
@@ -1113,7 +1113,7 @@ details[open] > .filter-summary .filter-chevron {
         border-top: 1px solid #e2e8f0;
     }
 
-    /* 展開時: PC レイアウト */
+    /* 展開時: PC レイアウト（レイアウト変更なし、隠れ項目のみ表示） */
     .job-card.expanded .job-card-layout {
         grid-template-columns: 256px 1fr;
         grid-template-rows: auto auto auto;
@@ -1122,26 +1122,36 @@ details[open] > .filter-summary .filter-chevron {
 
     .job-card.expanded .job-card-image {
         grid-column: 1;
-        grid-row: 1;
+        grid-row: 1 / 3;
         align-self: start;
     }
 
     .job-card.expanded .job-card-header {
         grid-column: 2;
         grid-row: 1;
+        margin-bottom: 24px;
     }
 
     .job-card.expanded .job-card-desc {
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 2;
         font-size: 14px;
-        margin-bottom: 0;
-        margin-top: 24px;
+        margin-bottom: 32px;
+        border-top: none;
+        padding-top: 0;
     }
 
     .job-card.expanded .spectrum-section {
-        grid-column: 2;
-        grid-row: 2 / 4;
+        grid-column: 1 / -1;
+        grid-row: 3;
+        background-color: #f8fafc;
+        border-radius: 24px;
+        padding: 32px;
+        border: 1px solid #f1f5f9;
+    }
+
+    .job-card.expanded .spectrum-hidden-items {
+        display: block;
     }
 
     /* --- もっと読み込む --- */
