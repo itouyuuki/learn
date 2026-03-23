@@ -580,17 +580,17 @@ details[open] > .filter-summary .filter-chevron {
     margin-top: 12px;
 }
 
-/* スペクトラムアイテム（モバイル: ラベル＋値が上段、バーが下段） */
+/* スペクトラムアイテム（共通: ラベルが上、値・バー・値が下） */
 .spectrum-item {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto;
-    gap: 4px 0;
-    align-items: end;
+    gap: 4px 12px;
+    align-items: center;
 }
 
 .spectrum-label {
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 1;
     font-size: 8px;
     font-weight: 700;
@@ -598,16 +598,25 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .spectrum-value {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1;
+    grid-row: 2;
     font-size: 9px;
     font-weight: 900;
     color: #3c5da8;
+    text-align: left;
+}
+
+.spectrum-value-right {
+    grid-column: 3;
+    grid-row: 2;
+    font-size: 9px;
+    font-weight: 700;
+    color: #94a3b8;
     text-align: right;
 }
 
 .spectrum-bar-wrap {
-    grid-column: 1 / -1;
+    grid-column: 2;
     grid-row: 2;
 }
 
@@ -1059,29 +1068,38 @@ details[open] > .filter-summary .filter-chevron {
         margin-top: 32px;
     }
 
-    /* スペクトラムアイテム（PC: 横1列） */
+    /* スペクトラムアイテム（PC: 縦並び、両側に項目名） */
     .spectrum-item {
-        grid-template-columns: 96px 1fr 160px;
-        grid-template-rows: auto;
-        gap: 0 24px;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 10px 24px;
         align-items: center;
     }
 
     .spectrum-label {
-        grid-column: 1;
+        grid-column: 1 / -1;
         grid-row: 1;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .spectrum-bar-wrap {
         grid-column: 2;
-        grid-row: 1;
+        grid-row: 2;
     }
 
     .spectrum-value {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .spectrum-value-right {
         grid-column: 3;
-        grid-row: 1;
-        font-size: 14px;
+        grid-row: 2;
+        font-size: 12px;
+        text-align: right;
+        color: #94a3b8;
     }
 
     .spectrum-bar {
