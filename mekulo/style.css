@@ -1064,8 +1064,14 @@ details[open] > .filter-summary .filter-chevron {
         letter-spacing: 0.2em;
     }
 
+    .spectrum-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
     .spectrum-list > * + * {
-        margin-top: 32px;
+        margin-top: 0;
     }
 
     /* スペクトラムアイテム（PC: 縦並び、両側に項目名） */
@@ -1121,11 +1127,18 @@ details[open] > .filter-summary .filter-chevron {
         border-top: 1px solid rgba(226, 232, 240, 0.5);
     }
 
-    .spectrum-hidden-items > * + * {
-        margin-top: 32px;
+    .job-card.expanded .spectrum-hidden-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .job-card.expanded .spectrum-hidden-items > * + * {
+        margin-top: 0;
     }
 
     .spectrum-category {
+        grid-column: 1 / -1;
         font-size: 11px;
         padding-top: 24px;
         border-top: 1px solid #e2e8f0;
@@ -1166,10 +1179,6 @@ details[open] > .filter-summary .filter-chevron {
         border-radius: 24px;
         padding: 32px;
         border: 1px solid #f1f5f9;
-    }
-
-    .job-card.expanded .spectrum-hidden-items {
-        display: block;
     }
 
     /* --- もっと読み込む --- */
