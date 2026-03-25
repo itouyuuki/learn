@@ -905,7 +905,7 @@ details[open] > .filter-summary .filter-chevron {
         display: grid;
         grid-template-columns: 360px 1fr;
         align-items: start;
-        gap: 0 32px;
+        gap: 0 10px;
         max-width: 1400px;
         margin: 0 auto;
         padding: 32px 24px;
@@ -1024,25 +1024,25 @@ details[open] > .filter-summary .filter-chevron {
 
     /* カードレイアウト（PC: grid で画像をサイドバー化） */
     .job-card-layout {
-        grid-template-columns: 256px 1fr;
+        grid-template-columns: 180px 1fr;
         grid-template-rows: auto auto auto;
-        gap: 0 40px;
+        gap: 0 28px;
     }
 
     .job-card-image {
         grid-column: 1;
         grid-row: 1 / 3;
         aspect-ratio: auto;
-        width: 256px;
-        height: 256px;
-        border-radius: 32px;
+        width: 180px;
+        height: 180px;
+        border-radius: 20px;
         align-self: start;
     }
 
     .job-card-header {
         grid-column: 2;
         grid-row: 1;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
     }
 
     .job-card-company {
@@ -1052,24 +1052,26 @@ details[open] > .filter-summary .filter-chevron {
     }
 
     .job-card-title {
-        font-size: 36px;
-        letter-spacing: -0.05em;
+        font-size: 26px;
+        letter-spacing: -0.03em;
     }
 
     .job-card-tags {
         display: flex;
-        gap: 8px;
-        margin-top: 12px;
+        flex-wrap: nowrap;
+        gap: 6px;
+        margin-top: 10px;
     }
 
     .job-card-tag {
-        padding: 4px 12px;
+        padding: 4px 10px;
         background-color: #f1f5f9;
         border-radius: 9999px;
         font-size: 10px;
         font-weight: 700;
         color: #64748b;
         letter-spacing: 0.05em;
+        white-space: nowrap;
     }
 
     .job-card-actions {
@@ -1211,9 +1213,9 @@ details[open] > .filter-summary .filter-chevron {
 
     /* 展開時: PC レイアウト（レイアウト変更なし、隠れ項目のみ表示） */
     .job-card.expanded .job-card-layout {
-        grid-template-columns: 256px 1fr;
+        grid-template-columns: 180px 1fr;
         grid-template-rows: auto auto auto;
-        gap: 0 40px;
+        gap: 0 28px;
     }
 
     .job-card.expanded .job-card-image {
@@ -1225,7 +1227,7 @@ details[open] > .filter-summary .filter-chevron {
     .job-card.expanded .job-card-header {
         grid-column: 2;
         grid-row: 1;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
     }
 
     .job-card.expanded .job-card-desc {
