@@ -161,6 +161,9 @@ img {
    ========================================================================== */
 .filter-section {
     border-radius: 16px;
+    position: sticky;
+    top: 0px;
+    z-index: 40;
 }
 
 /* details カード */
@@ -459,7 +462,7 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .job-cards > * + * {
-    margin-top: 32px;
+    margin-top: 15px;
 }
 
 .job-card {
@@ -917,7 +920,10 @@ details[open] > .filter-summary .filter-chevron {
     /* フィルターをサイドバーとしてsticky */
     .filter-section {
         position: sticky;
-        top: 76px;
+        top: 36px;
+        align-self: start;
+        max-height: calc(100vh - 96px);
+        overflow-y: auto;
     }
 
     /* PC時はsummaryを非表示、detailsは常時展開 */
