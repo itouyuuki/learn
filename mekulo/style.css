@@ -285,9 +285,9 @@ details[open] > .filter-summary .filter-chevron {
 
 /* 点線 divider（左右の項目の間） */
 .filter-param-divider {
-    border-bottom: 1px dotted #cbd5e1;
+    border-bottom: 6px dotted #cbd5e1;
     margin: 0 4px 2px;
-    min-width: 8px;
+    min-width: 33px;
 }
 
 /* チェックボックス付きラベル */
@@ -469,7 +469,6 @@ details[open] > .filter-summary .filter-chevron {
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(226, 232, 240, 0.4);
     transition: box-shadow 0.3s;
-    margin: 20px 0;
 }
 
 .job-card:hover {
@@ -904,9 +903,9 @@ details[open] > .filter-summary .filter-chevron {
     .main {
         display: grid;
         grid-template-columns: 360px 1fr;
-        align-items: start;
+        align-items: stretch;
         gap: 0 10px;
-        max-width: 1400px;
+        max-width: 1300px;
         margin: 0 auto;
         padding: 32px 24px;
     }
