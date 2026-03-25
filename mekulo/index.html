@@ -14,49 +14,92 @@
         <section class="filter-section">
             <details class="filter-card">
                 <summary class="filter-summary">
-                    <span class="material-symbols-outlined filter-summary-icon">filter_list</span>
+                    <span class="material-symbols-outlined filter-summary-icon">tune</span>
                     <span class="filter-summary-title">営業スタイルを絞り込む</span>
                     <span class="material-symbols-outlined filter-chevron">expand_more</span>
                 </summary>
+                <div class="filter-card-title">
+                    <span class="material-symbols-outlined">tune</span>
+                    並び替えフォーム
+                </div>
                 <div class="filter-body">
+
+                    <!-- グループ1: 人・環境 -->
                     <div class="filter-group">
-                        <h3 class="filter-category-title">
-                            <span>働き方</span>
-                            <div class="filter-category-divider"></div>
-                        </h3>
-                        <div class="filter-category-items">
-                            <div class="filter-item">
-                                <div class="filter-item-header">
-                                    <span class="filter-item-label">勤務場所</span>
-                                    <span class="material-symbols-outlined filter-help-icon">help</span>
-                                </div>
-                                <div class="filter-item-btns">
-                                    <button class="filter-btn active">外回り中心</button>
-                                    <button class="filter-btn inactive">オフィス中心</button>
-                                </div>
+                        <div class="filter-section-header">
+                            人・環境
+                            <button class="filter-help-btn"><span class="material-symbols-outlined">help</span></button>
+                        </div>
+                        <div class="filter-params">
+                            <div class="filter-param-row">
+                                <label class="filter-option">
+                                    <input type="checkbox" class="filter-switch" checked>
+                                    <span>会話少なめ</span>
+                                </label>
+                                <div class="filter-param-divider"></div>
+                                <label class="filter-option filter-option--right">
+                                    <input type="checkbox" class="filter-switch">
+                                    <span>人との関わり重視</span>
+                                </label>
                             </div>
-                            <div class="filter-item">
-                                <div class="filter-item-header">
-                                    <span class="filter-item-label">アプローチ</span>
-                                    <span class="material-symbols-outlined filter-help-icon">help</span>
-                                </div>
-                                <div class="filter-item-btns">
-                                    <button class="filter-btn inactive">新規（狩猟）</button>
-                                    <button class="filter-btn active">既存（農耕）</button>
-                                </div>
+                            <div class="filter-param-row">
+                                <label class="filter-option">
+                                    <input type="checkbox" class="filter-switch" checked>
+                                    <span>屋内で働く</span>
+                                </label>
+                                <div class="filter-param-divider"></div>
+                                <label class="filter-option filter-option--right">
+                                    <input type="checkbox" class="filter-switch">
+                                    <span>自然の中で働く</span>
+                                </label>
                             </div>
-                            <div class="filter-item">
-                                <div class="filter-item-header">
-                                    <span class="filter-item-label">顧客属性</span>
-                                    <span class="material-symbols-outlined filter-help-icon">help</span>
-                                </div>
-                                <div class="filter-item-btns">
-                                    <button class="filter-btn active">B2B</button>
-                                    <button class="filter-btn inactive">B2C</button>
-                                </div>
+                            <div class="filter-param-row">
+                                <label class="filter-option">
+                                    <input type="checkbox" class="filter-switch">
+                                    <span>年齢層が低め</span>
+                                </label>
+                                <div class="filter-param-divider"></div>
+                                <label class="filter-option filter-option--right">
+                                    <input type="checkbox" class="filter-switch" checked>
+                                    <span>年齢層が高め</span>
+                                </label>
                             </div>
                         </div>
                     </div>
+
+                    <!-- グループ2: スキル・リスク -->
+                    <div class="filter-group">
+                        <div class="filter-section-header">
+                            スキル・リスク
+                            <button class="filter-help-btn"><span class="material-symbols-outlined">help</span></button>
+                        </div>
+                        <div class="filter-params">
+                            <div class="filter-param-row">
+                                <label class="filter-option">
+                                    <input type="checkbox" class="filter-switch" checked>
+                                    <span>一度覚えたら働ける</span>
+                                </label>
+                                <div class="filter-param-divider"></div>
+                                <label class="filter-option filter-option--right">
+                                    <input type="checkbox" class="filter-switch">
+                                    <span>変化に合わせて働く</span>
+                                </label>
+                            </div>
+                            <div class="filter-param-row">
+                                <label class="filter-option">
+                                    <input type="checkbox" class="filter-switch">
+                                    <span>負荷が比較的小さい</span>
+                                </label>
+                                <div class="filter-param-divider"></div>
+                                <label class="filter-option filter-option--right">
+                                    <input type="checkbox" class="filter-switch" checked>
+                                    <span>負荷のぶん高収入</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- アクション -->
                     <div class="filter-actions">
                         <button class="filter-apply-btn">この条件で並び替え</button>
                         <button class="filter-reset-btn">
@@ -64,22 +107,25 @@
                             条件をすべてリセット
                         </button>
                     </div>
+
                 </div>
             </details>
+
+            <!-- フィルタータグ -->
             <div class="filter-tags">
                 <button class="filter-tag">
-                    <span class="material-symbols-outlined filter-tag-icon">location_on</span>
-                    <span>外回り</span>
+                    <span class="material-symbols-outlined filter-tag-icon">chat_bubble</span>
+                    <span>会話少なめ</span>
                     <span class="material-symbols-outlined filter-tag-close">close</span>
                 </button>
                 <button class="filter-tag">
-                    <span class="material-symbols-outlined filter-tag-icon">person_search</span>
-                    <span>既存（農耕）</span>
+                    <span class="material-symbols-outlined filter-tag-icon">home_work</span>
+                    <span>屋内で働く</span>
                     <span class="material-symbols-outlined filter-tag-close">close</span>
                 </button>
                 <button class="filter-tag">
-                    <span class="material-symbols-outlined filter-tag-icon">groups</span>
-                    <span>B2B</span>
+                    <span class="material-symbols-outlined filter-tag-icon">local_fire_department</span>
+                    <span>負荷のぶん高収入</span>
                     <span class="material-symbols-outlined filter-tag-close">close</span>
                 </button>
             </div>
@@ -286,6 +332,19 @@
         </div>
     </main>
     <script>
+        // PC時はフィルターを常時展開
+        function syncFilterOpen() {
+            const filterCard = document.querySelector('.filter-card');
+            if (!filterCard) return;
+            if (window.innerWidth >= 768) {
+                filterCard.setAttribute('open', '');
+            } else {
+                filterCard.removeAttribute('open');
+            }
+        }
+        syncFilterOpen();
+        window.addEventListener('resize', syncFilterOpen);
+
         document.querySelectorAll('.spectrum-more-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var card = btn.closest('.job-card');
