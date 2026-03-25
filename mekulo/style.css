@@ -1,16 +1,8 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   リセット & ベース
+   ベース
    ========================================================================== */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background-color: #F9FAFB;
     font-family: "Noto Sans JP", "Inter", sans-serif;
@@ -18,25 +10,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-}
-
-img {
-    display: block;
-    max-width: 100%;
 }
 
 /* ==========================================================================
@@ -53,74 +26,6 @@ img {
 
 .grayscale {
     filter: grayscale(100%);
-}
-
-/* ==========================================================================
-   ヘッダー
-   ========================================================================== */
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #f1f5f9;
-    padding: 0 16px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-menu-btn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #475569;
-}
-
-.header-menu-btn .material-symbols-outlined {
-    font-size: 24px;
-}
-
-.header-nav {
-    display: none;
-    align-items: center;
-    gap: 24px;
-}
-
-.header-nav-link {
-    font-size: 14px;
-    font-weight: 700;
-    color: #475569;
-    transition: color 0.2s;
-}
-
-.header-nav-link:hover {
-    color: #3c5da8;
-}
-
-.header-nav-divider {
-    height: 24px;
-    width: 1px;
-    background-color: #e2e8f0;
-}
-
-.header-nav-btn {
-    background-color: #333;
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 9999px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: opacity 0.2s;
-}
-
-.header-nav-btn:hover {
-    opacity: 0.9;
 }
 
 /* ==========================================================================
@@ -249,6 +154,11 @@ details[open] > .filter-summary .filter-chevron {
 
 /* ？ヘルプボタン */
 .filter-help-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
     display: flex;
     align-items: center;
     margin-left: 2px;
@@ -321,6 +231,7 @@ details[open] > .filter-summary .filter-chevron {
 .filter-switch {
     appearance: none;
     -webkit-appearance: none;
+    font: inherit;
     position: relative;
     width: 32px;
     height: 18px;
@@ -365,6 +276,9 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .filter-apply-btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     width: 100%;
     padding: 12px;
     background-color: #3c5da8;
@@ -384,6 +298,11 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .filter-reset-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
     width: 100%;
     display: flex;
     align-items: center;
@@ -502,6 +421,8 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .job-card-image img {
+    display: block;
+    max-width: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -575,6 +496,7 @@ details[open] > .filter-summary .filter-chevron {
     box-shadow: 0 4px 6px -1px rgba(60, 93, 168, 0.2);
     transition: opacity 0.2s;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .job-card-link:hover {
@@ -695,6 +617,11 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .spectrum-more-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
     width: 100%;
     margin-top: 12px;
     padding-top: 0;
@@ -765,6 +692,9 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .load-more-btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     width: 100%;
     padding: 16px;
     border-radius: 16px;
@@ -875,21 +805,6 @@ details[open] > .filter-summary .filter-chevron {
    PC用レスポンシブ（min-width: 768px）
    ========================================================================== */
 @media (min-width: 768px) {
-
-    /* --- ヘッダー --- */
-    .header {
-        padding: 0 24px;
-        height: 64px;
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    .header-menu-btn {
-        display: none;
-    }
-
-    .header-nav {
-        display: flex;
-    }
 
     /* --- メイン --- */
     .main {
