@@ -14,24 +14,6 @@
 
 /*-------------------------------
 
-	ユーティリティ
-
--------------------------------*/
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.grayscale {
-    filter: grayscale(100%);
-}
-
-/*-------------------------------
-
 	メインコンテンツ
 
 -------------------------------*/
@@ -42,27 +24,6 @@
 
 .main-content > * + * {
     margin-top: 24px;
-}
-
-/*---------- ページタイトル（モバイルでは非表示） ----------*/
-.page-title-section {
-    display: none;
-    margin-bottom: 32px;
-}
-
-.page-title {
-    font-size: 30px;
-    font-weight: 900;
-    color: #0f172a;
-    margin-bottom: 8px;
-    letter-spacing: -0.025em;
-}
-
-.page-subtitle {
-    color: #64748b;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 14px;
 }
 
 /*-------------------------------
@@ -445,25 +406,6 @@ details[open] > .filter-summary .filter-chevron {
     margin-top: 0;
 }
 
-.job-card-match {
-    font-size: 11px;
-    font-weight: 900;
-    padding: 8px 16px;
-    border-radius: 9999px;
-}
-
-.job-card-match.high {
-    background-color: #3c5da8;
-    color: #fff;
-    box-shadow: 0 4px 6px -1px rgba(60, 93, 168, 0.2);
-}
-
-.job-card-match.medium {
-    background-color: #f1f5f9;
-    color: #475569;
-    border: 1px solid #e2e8f0;
-}
-
 .job-card-link {
     background-color: #3c5da8;
     color: #fff;
@@ -590,23 +532,6 @@ details[open] > .filter-summary .filter-chevron {
     transform: translateX(50%);
 }
 
-/*---------- 下段: 左右の値ラベル ----------*/
-.spectrum-value {
-    font-size: 8px;
-    font-weight: 900;
-    color: #3c5da8;
-    text-align: left;
-    display: none; /* バー下のラベル行で表示するため個別非表示 */
-}
-
-.spectrum-value-right {
-    font-size: 8px;
-    font-weight: 700;
-    color: #94a3b8;
-    text-align: right;
-    display: none;
-}
-
 /*---------- 左右ラベルを横並びで表示するためbar-wrapの後にflexコンテナを使う ----------*/
 .spectrum-bar-wrap {
     display: flex;
@@ -699,83 +624,6 @@ details[open] > .filter-summary .filter-chevron {
 
 .job-card.expanded .spectrum-section {
     grid-row: 2 / 5;
-}
-
-/*-------------------------------
-
-	もっと読み込むボタン
-
--------------------------------*/
-.load-more-section {
-    padding: 16px 0;
-    text-align: center;
-}
-
-.load-more-btn {
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    width: 100%;
-    padding: 16px;
-    border-radius: 16px;
-    background-color: #0f172a;
-    font-size: 14px;
-    font-weight: 900;
-    color: #fff;
-    transition: all 0.2s;
-    box-shadow: 0 20px 25px -5px rgba(226, 232, 240, 1);
-}
-
-.load-more-btn:active {
-    transform: scale(0.95);
-}
-
-.load-more-text {
-    margin-top: 12px;
-    font-size: 10px;
-    color: #94a3b8;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-}
-
-/*-------------------------------
-
-	フッター（モバイル非表示）
-
--------------------------------*/
-.footer {
-    display: none;
-}
-
-.footer-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    opacity: 0.5;
-    filter: grayscale(100%);
-}
-
-.footer-logo-text {
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: -0.025em;
-}
-
-.footer-disclaimer {
-    color: #94a3b8;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    max-width: 448px;
-    text-align: center;
-    line-height: 2;
 }
 
 /*-------------------------------
@@ -907,11 +755,6 @@ details[open] > .filter-summary .filter-chevron {
         box-shadow: 0 2px 12px rgba(60, 93, 168, 0.07);
     }
 
-    /*---------- ページタイトル ----------*/
-    .page-title-section {
-        display: block;
-    }
-
     /*---------- フィルター（PC） ----------*/
     .job-card {
         border-radius: 40px;
@@ -983,15 +826,6 @@ details[open] > .filter-summary .filter-chevron {
         padding: 16px 40px;
         font-size: 16px;
         box-shadow: 0 20px 25px -5px rgba(60, 93, 168, 0.3);
-    }
-
-    .job-card-match {
-        font-size: 12px;
-        padding: 6px 16px;
-    }
-
-    .job-card-match.high {
-        box-shadow: 0 10px 15px -3px rgba(60, 93, 168, 0.2);
     }
 
     .job-card-desc {
@@ -1076,14 +910,6 @@ details[open] > .filter-summary .filter-chevron {
         font-size: 15px;
     }
 
-    .spectrum-value {
-        display: none;
-    }
-
-    .spectrum-value-right {
-        display: none;
-    }
-
     .spectrum-more-btn {
         font-size: 13px;
         font-weight: 900;
@@ -1145,44 +971,5 @@ details[open] > .filter-summary .filter-chevron {
         border-radius: 24px;
         padding: 32px;
         border: 1px solid #f1f5f9;
-    }
-
-    /*---------- もっと読み込む ----------*/
-    .load-more-section {
-        padding: 64px 0;
-    }
-
-    .load-more-btn {
-        width: auto;
-        padding: 16px 48px;
-        border-radius: 9999px;
-        background-color: #333;
-    }
-
-    .load-more-btn:hover {
-        opacity: 0.9;
-    }
-
-    /*---------- フッター ----------*/
-    .footer {
-        display: block;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 48px 24px;
-        border-top: 1px solid #e2e8f0;
-    }
-
-    .footer-inner {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .footer-disclaimer {
-        text-align: right;
-    }
-
-    /*---------- ボトムナビ非表示 ----------*/
-    .bottom-nav {
-        display: none;
     }
 }
