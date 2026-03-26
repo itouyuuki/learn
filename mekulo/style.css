@@ -146,7 +146,7 @@ details[open] > .filter-summary .filter-chevron {
     padding-bottom: 0;
 }
 
-.filter-param-divider {
+.filter-param-divide {
     border-bottom: 6px dotted #cbd5e1;
     margin: 0 4px 2px;
     min-width: 33px;
