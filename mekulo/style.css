@@ -1,8 +1,8 @@
-@charset "UTF-8";
+/*-------------------------------
 
-/* ==========================================================================
-   ベース
-   ========================================================================== */
+	ベース
+
+-------------------------------*/
 .page-body {
     background-color: #F9FAFB;
     font-family: "Noto Sans JP", "Inter", sans-serif;
@@ -12,9 +12,11 @@
     line-height: 1.5;
 }
 
-/* ==========================================================================
-   ユーティリティ
-   ========================================================================== */
+/*-------------------------------
+
+	ユーティリティ
+
+-------------------------------*/
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
@@ -28,9 +30,11 @@
     filter: grayscale(100%);
 }
 
-/* ==========================================================================
-   メインコンテンツ
-   ========================================================================== */
+/*-------------------------------
+
+	メインコンテンツ
+
+-------------------------------*/
 .main-content {
     padding: 16px;
     padding-bottom: 96px;
@@ -40,7 +44,7 @@
     margin-top: 24px;
 }
 
-/* ページタイトル（モバイルでは非表示） */
+/*---------- ページタイトル（モバイルでは非表示） ----------*/
 .page-title-section {
     display: none;
     margin-bottom: 32px;
@@ -61,9 +65,11 @@
     font-size: 14px;
 }
 
-/* ==========================================================================
-   フィルターセクション
-   ========================================================================== */
+/*-------------------------------
+
+	フィルターセクション
+
+-------------------------------*/
 .filter-section {
     border-radius: 16px;
     position: sticky;
@@ -71,7 +77,7 @@
     z-index: 40;
 }
 
-/* details カード */
+/*---------- details カード ----------*/
 .filter-card {
     background-color: #fff;
     border: 1px solid #e2e8f0;
@@ -80,7 +86,6 @@
     box-shadow: 0 4px 20px rgba(60, 93, 168, 0.12);
 }
 
-/* summary（スマホ用アコーディオンヘッダー） */
 .filter-summary {
     list-style: none;
     display: flex;
@@ -112,18 +117,15 @@ details[open] > .filter-summary .filter-chevron {
     transform: rotate(180deg);
 }
 
-/* フィルター本体 */
 .filter-body {
     padding: 12px 12px 16px;
     background-color: #fff;
 }
 
-/* グループ */
 .filter-group {
     margin-bottom: 4px;
 }
 
-/* セクションヘッダー（左ボーダーバッジ型） */
 .filter-section-header {
     display: flex;
     align-items: center;
@@ -145,7 +147,7 @@ details[open] > .filter-summary .filter-chevron {
     margin-top: 4px;
 }
 
-/* ？ヘルプボタン */
+/*---------- ？ヘルプボタン ----------*/
 .filter-help-btn {
     border: none;
     background: none;
@@ -163,12 +165,10 @@ details[open] > .filter-summary .filter-chevron {
     color: #3c5da8;
 }
 
-/* param行のコンテナ */
 .filter-params {
     padding: 0 4px;
 }
 
-/* 各対比行 */
 .filter-param-row {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -185,14 +185,12 @@ details[open] > .filter-summary .filter-chevron {
     padding-bottom: 0;
 }
 
-/* 点線 divider（左右の項目の間） */
 .filter-param-divider {
     border-bottom: 6px dotted #cbd5e1;
     margin: 0 4px 2px;
     min-width: 33px;
 }
 
-/* チェックボックス付きラベル */
 .filter-option {
     display: flex;
     align-items: center;
@@ -206,7 +204,6 @@ details[open] > .filter-summary .filter-chevron {
     transition: background-color 0.15s;
 }
 
-/* 右側ラベルも左寄せ（スイッチ→テキストの順で統一） */
 .filter-option--right {
     justify-content: flex-start;
 }
@@ -216,7 +213,6 @@ details[open] > .filter-summary .filter-chevron {
     background-color: #f8fafc;
 }
 
-/* トグルスイッチ */
 .filter-switch {
     appearance: none;
     -webkit-appearance: none;
@@ -254,7 +250,7 @@ details[open] > .filter-summary .filter-chevron {
     transform: translateX(14px);
 }
 
-/* アクションボタン */
+/*---------- アクションボタン ----------*/
 .filter-actions {
     display: flex;
     flex-direction: column;
@@ -307,7 +303,7 @@ details[open] > .filter-summary .filter-chevron {
     color: #3c5da8;
 }
 
-/* フィルタータグ */
+/*---------- フィルタータグ ----------*/
 .filter-tags {
     display: flex;
     flex-wrap: wrap;
@@ -353,9 +349,11 @@ details[open] > .filter-summary .filter-chevron {
     overflow: hidden;
 }
 
-/* ==========================================================================
-   求人カード
-   ========================================================================== */
+/*-------------------------------
+
+	求人カード
+
+-------------------------------*/
 .job-cards {
     max-width: 896px;
     margin: 0 auto;
@@ -383,14 +381,14 @@ details[open] > .filter-summary .filter-chevron {
     padding: 20px;
 }
 
-/* --- カードレイアウト（モバイル: grid で画像+スペクトラム横並び） --- */
+/*---------- カードレイアウト（モバイル: grid で画像+スペクトラム横並び） ----------*/
 .job-card-layout {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 12px;
 }
 
-/* 画像（モバイル: 左カラム、正方形） */
+/*---------- 画像（モバイル: 左カラム、正方形） ----------*/
 .job-card-image {
     grid-column: 1;
     grid-row: 2;
@@ -410,7 +408,7 @@ details[open] > .filter-summary .filter-chevron {
     object-fit: cover;
 }
 
-/* ヘッダー（モバイル: タイトルとリンクが横並び） */
+/*---------- ヘッダー（モバイル: タイトルとリンクが横並び） ----------*/
 .job-card-header {
     grid-column: 1 / -1;
     grid-row: 1;
@@ -487,7 +485,7 @@ details[open] > .filter-summary .filter-chevron {
     text-decoration: none;
 }
 
-/* 説明文 */
+/*---------- 説明文 ----------*/
 .job-card-desc {
     grid-column: 1 / -1;
     grid-row: 3;
@@ -499,9 +497,11 @@ details[open] > .filter-summary .filter-chevron {
     padding-top: 12px;
 }
 
-/* ==========================================================================
-   スペクトラムセクション
-   ========================================================================== */
+/*-------------------------------
+
+	スペクトラムセクション
+
+-------------------------------*/
 .spectrum-section {
     grid-column: 2;
     grid-row: 2;
@@ -533,15 +533,15 @@ details[open] > .filter-summary .filter-chevron {
     margin-top: 12px;
 }
 
-/* スペクトラムアイテム（共通: ラベルが上、値・バー・値が下） */
-/* スペクトラムアイテム */
+/*---------- スペクトラムアイテム（共通: ラベルが上、値・バー・値が下） ----------*/
+/*---------- スペクトラムアイテム ----------*/
 .spectrum-item {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-/* 上段: ラベル名（中央） */
+/*---------- 上段: ラベル名（中央） ----------*/
 .spectrum-label {
     font-size: 12px;
     font-weight: 700;
@@ -550,12 +550,12 @@ details[open] > .filter-summary .filter-chevron {
     letter-spacing: 0.04em;
 }
 
-/* バーエリア全体 */
+/*---------- バーエリア全体 ----------*/
 .spectrum-bar-wrap {
     width: 100%;
 }
 
-/* バー背景（全体を青で塗りつぶし） */
+/*---------- バー背景（全体を青で塗りつぶし） ----------*/
 .spectrum-bar {
     height: 10px;
     width: 100%;
@@ -565,7 +565,7 @@ details[open] > .filter-summary .filter-chevron {
     overflow: visible;
 }
 
-/* fillはドットの位置を決めるだけのコンテナ */
+/*---------- fillはドットの位置を決めるだけのコンテナ ----------*/
 .spectrum-fill {
     position: absolute;
     top: 50%;
@@ -578,7 +578,7 @@ details[open] > .filter-summary .filter-chevron {
     pointer-events: none;
 }
 
-/* ドット（白丸）で割合位置を示す */
+/*---------- ドット（白丸）で割合位置を示す ----------*/
 .spectrum-dot {
     width: 18px;
     height: 18px;
@@ -590,7 +590,7 @@ details[open] > .filter-summary .filter-chevron {
     transform: translateX(50%);
 }
 
-/* 下段: 左右の値ラベル */
+/*---------- 下段: 左右の値ラベル ----------*/
 .spectrum-value {
     font-size: 8px;
     font-weight: 900;
@@ -607,7 +607,7 @@ details[open] > .filter-summary .filter-chevron {
     display: none;
 }
 
-/* 左右ラベルを横並びで表示するためbar-wrapの後にflexコンテナを使う */
+/*---------- 左右ラベルを横並びで表示するためbar-wrapの後にflexコンテナを使う ----------*/
 .spectrum-bar-wrap {
     display: flex;
     flex-direction: column;
@@ -631,7 +631,7 @@ details[open] > .filter-summary .filter-chevron {
     color: #94a3b8;
 }
 
-/* 強調ラベル（ドット位置に近い方） */
+/*---------- 強調ラベル（ドット位置に近い方） ----------*/
 .spectrum-bar-label--active {
     color: #3c5da8;
     font-weight: 900;
@@ -662,7 +662,7 @@ details[open] > .filter-summary .filter-chevron {
     color: #3c5da8;
 }
 
-/* 隠し項目 */
+/*---------- 隠し項目 ----------*/
 .spectrum-hidden-items {
     display: none;
 }
@@ -684,7 +684,7 @@ details[open] > .filter-summary .filter-chevron {
     border-top: 1px solid #f1f5f9;
 }
 
-/* 展開時: 説明文を左カラムに移動（モバイル） */
+/*---------- 展開時: 説明文を左カラムに移動（モバイル） ----------*/
 .job-card.expanded .job-card-layout {
     grid-template-columns: 2fr 3fr;
     grid-template-rows: auto auto auto auto;
@@ -701,9 +701,11 @@ details[open] > .filter-summary .filter-chevron {
     grid-row: 2 / 5;
 }
 
-/* ==========================================================================
-   もっと読み込むボタン
-   ========================================================================== */
+/*-------------------------------
+
+	もっと読み込むボタン
+
+-------------------------------*/
 .load-more-section {
     padding: 16px 0;
     text-align: center;
@@ -736,9 +738,11 @@ details[open] > .filter-summary .filter-chevron {
     letter-spacing: 0.1em;
 }
 
-/* ==========================================================================
-   フッター（モバイル非表示）
-   ========================================================================== */
+/*-------------------------------
+
+	フッター（モバイル非表示）
+
+-------------------------------*/
 .footer {
     display: none;
 }
@@ -774,52 +778,14 @@ details[open] > .filter-summary .filter-chevron {
     line-height: 2;
 }
 
-/* ==========================================================================
-   ボトムナビゲーション（モバイル表示）
-   ========================================================================== */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #e2e8f0;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 50;
-}
+/*-------------------------------
 
-.bottom-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 12px;
-    color: #94a3b8;
-}
+	PC用レスポンシブ（min-width: 768px）
 
-.bottom-nav-item.active {
-    color: #3c5da8;
-}
-
-.bottom-nav-item span:last-child {
-    font-size: 9px;
-    font-weight: 700;
-}
-
-/* PC用サイドバータイトル（スマホ時は非表示） */
-.filter-card-title {
-    display: none;
-}
-
-/* ==========================================================================
-   PC用レスポンシブ（min-width: 768px）
-   ========================================================================== */
+-------------------------------*/
 @media (min-width: 768px) {
 
-    /* --- メイン --- */
+    /*---------- メイン ----------*/
     .main-content {
         max-width: 1280px;
         margin: 0 auto;
@@ -830,7 +796,7 @@ details[open] > .filter-summary .filter-chevron {
         margin-top: 32px;
     }
 
-    /* --- メイン（PC: 2カラムサイドバーレイアウト） --- */
+    /*---------- メイン（PC: 2カラムサイドバーレイアウト） ----------*/
     .main-content {
         display: grid;
         grid-template-columns: 360px 1fr;
@@ -845,7 +811,7 @@ details[open] > .filter-summary .filter-chevron {
         margin-top: 0;
     }
 
-    /* フィルターをサイドバーとしてsticky */
+    /*---------- フィルターをサイドバーとしてsticky ----------*/
     .filter-section {
         position: sticky;
         top: 50px;
@@ -854,7 +820,7 @@ details[open] > .filter-summary .filter-chevron {
         overflow-y: auto;
     }
 
-    /* PC時はsummaryを非表示、detailsは常時展開 */
+    /*---------- PC時はsummaryを非表示、detailsは常時展開 ----------*/
     .filter-summary {
         display: none;
     }
@@ -902,7 +868,7 @@ details[open] > .filter-summary .filter-chevron {
         font-size: 10px;
     }
 
-    /* フィルタータグ（PC） */
+    /*---------- フィルタータグ（PC） ----------*/
     .filter-tags {
         border-radius: 0 0 16px 16px;
         padding: 8px 12px;
@@ -916,7 +882,7 @@ details[open] > .filter-summary .filter-chevron {
         box-shadow: 0 1px 3px rgba(60, 93, 168, 0.1);
     }
 
-    /* PC用サイドバータイトル */
+    /*---------- PC用サイドバータイトル ----------*/
     .filter-card-title {
         display: flex;
         align-items: center;
@@ -934,19 +900,19 @@ details[open] > .filter-summary .filter-chevron {
         font-size: 16px;
     }
 
-    /* filter-cardの上角丸はtitleが担うので調整 */
+    /*---------- filter-cardの上角丸はtitleが担うので調整 ----------*/
     .filter-card {
         border-radius: 16px;
         border: 1px solid #e2e8f0;
         box-shadow: 0 2px 12px rgba(60, 93, 168, 0.07);
     }
 
-    /* --- ページタイトル --- */
+    /*---------- ページタイトル ----------*/
     .page-title-section {
         display: block;
     }
 
-    /* --- フィルター（PC） --- */
+    /*---------- フィルター（PC） ----------*/
     .job-card {
         border-radius: 40px;
     }
@@ -955,7 +921,7 @@ details[open] > .filter-summary .filter-chevron {
         padding: 32px;
     }
 
-    /* カードレイアウト（PC: grid で画像をサイドバー化） */
+    /*---------- カードレイアウト（PC: grid で画像をサイドバー化） ----------*/
     .job-card-layout {
         grid-template-columns: 180px 1fr;
         grid-template-rows: auto auto auto;
@@ -1066,7 +1032,7 @@ details[open] > .filter-summary .filter-chevron {
         margin-top: 0;
     }
 
-    /* スペクトラムアイテム（PC） */
+    /*---------- スペクトラムアイテム（PC） ----------*/
     .spectrum-item {
         display: flex;
         flex-direction: column;
@@ -1144,7 +1110,7 @@ details[open] > .filter-summary .filter-chevron {
         border-top: 1px solid #e2e8f0;
     }
 
-    /* 展開時: PC レイアウト（レイアウト変更なし、隠れ項目のみ表示） */
+    /*---------- 展開時: PC レイアウト（レイアウト変更なし、隠れ項目のみ表示） ----------*/
     .job-card.expanded .job-card-layout {
         grid-template-columns: 180px 1fr;
         grid-template-rows: auto auto auto;
@@ -1181,7 +1147,7 @@ details[open] > .filter-summary .filter-chevron {
         border: 1px solid #f1f5f9;
     }
 
-    /* --- もっと読み込む --- */
+    /*---------- もっと読み込む ----------*/
     .load-more-section {
         padding: 64px 0;
     }
@@ -1197,7 +1163,7 @@ details[open] > .filter-summary .filter-chevron {
         opacity: 0.9;
     }
 
-    /* --- フッター --- */
+    /*---------- フッター ----------*/
     .footer {
         display: block;
         max-width: 1280px;
@@ -1215,7 +1181,7 @@ details[open] > .filter-summary .filter-chevron {
         text-align: right;
     }
 
-    /* --- ボトムナビ非表示 --- */
+    /*---------- ボトムナビ非表示 ----------*/
     .bottom-nav {
         display: none;
     }
