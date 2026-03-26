@@ -165,10 +165,6 @@ details[open] > .filter-summary .filter-chevron {
     transition: background-color 0.15s;
 }
 
-.filter-option--right {
-    justify-content: flex-start;
-}
-
 
 .filter-option:hover {
     background-color: #f8fafc;
