@@ -225,7 +225,10 @@
                         </p>
                     </div>
                     <button class="spectrum-more-btn">
-                        残り2項目を表示 <img src="expand_more-gray.svg" alt="" width="14" height="14">
+                        <span class="btn-text-open">残り2項目を表示</span>
+                        <span class="btn-text-close">閉じる</span>
+                        <img class="icon-expand" src="expand_more-gray.svg" alt="" width="14" height="14">
+                        <img class="icon-collapse" src="expand_less-gray.svg" alt="" width="14" height="14">
                     </button>
                 </div>
             </div>
@@ -329,7 +332,10 @@
                         </p>
                     </div>
                     <button class="spectrum-more-btn">
-                        残り2項目を表示 <img src="expand_more-gray.svg" alt="" width="14" height="14">
+                        <span class="btn-text-open">残り2項目を表示</span>
+                        <span class="btn-text-close">閉じる</span>
+                        <img class="icon-expand" src="expand_more-gray.svg" alt="" width="14" height="14">
+                        <img class="icon-collapse" src="expand_less-gray.svg" alt="" width="14" height="14">
                     </button>
                 </div>
             </div>
@@ -351,16 +357,7 @@
 
         document.querySelectorAll('.spectrum-more-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
-                var card = btn.closest('.job-card');
-                var Expanded = card.classList.toggle('expanded');
-                var icon = btn.querySelector('img');
-                if (Expanded) {
-                    btn.childNodes[0].textContent = '閉じる ';
-                    icon.src = 'expand_less-gray.svg';
-                } else {
-                    btn.childNodes[0].textContent = '残り2項目を表示 ';
-                    icon.src = 'expand_more-gray.svg';
-                }
+                btn.closest('.job-card').classList.toggle('expanded');
             });
         });
     </script>

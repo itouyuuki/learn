@@ -587,6 +587,22 @@ details[open] > .filter-summary .filter-chevron {
     color: #3c5da8;
 }
 
+/*---------- ボタンテキスト/アイコンの切り替え ----------*/
+.spectrum-more-btn .btn-text-close,
+.spectrum-more-btn .icon-collapse {
+    display: none;
+}
+
+.job-card.expanded .btn-text-open,
+.job-card.expanded .icon-expand {
+    display: none;
+}
+
+.job-card.expanded .btn-text-close,
+.job-card.expanded .icon-collapse {
+    display: inline;
+}
+
 /*---------- 隠し項目 ----------*/
 .spectrum-hidden-items {
     display: none;
