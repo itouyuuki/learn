@@ -3,7 +3,7 @@
 /* ==========================================================================
    ベース
    ========================================================================== */
-body {
+.page-body {
     background-color: #F9FAFB;
     font-family: "Noto Sans JP", "Inter", sans-serif;
     color: #0f172a;
@@ -31,12 +31,12 @@ body {
 /* ==========================================================================
    メインコンテンツ
    ========================================================================== */
-.main {
+.main-content {
     padding: 16px;
     padding-bottom: 96px;
 }
 
-.main > * + * {
+.main-content > * + * {
     margin-top: 24px;
 }
 
@@ -372,6 +372,7 @@ details[open] > .filter-summary .filter-chevron {
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(226, 232, 240, 0.4);
     transition: box-shadow 0.3s;
+    margin-top: 10px;
 }
 
 .job-card:hover {
@@ -427,6 +428,7 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .job-card-title {
+    margin: 0;
     font-size: 20px;
     font-weight: 900;
     color: #0f172a;
@@ -521,7 +523,7 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .spectrum-header-text {
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 900;
     color: #3c5da8;
     letter-spacing: 0.05em;
@@ -532,64 +534,108 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 /* スペクトラムアイテム（共通: ラベルが上、値・バー・値が下） */
+/* スペクトラムアイテム */
 .spectrum-item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 4px 12px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
+/* 上段: ラベル名（中央） */
 .spectrum-label {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
-    color: #94a3b8;
+    color: #103975;
+    text-align: center;
+    letter-spacing: 0.04em;
 }
 
+/* バーエリア全体 */
+.spectrum-bar-wrap {
+    width: 100%;
+}
+
+/* バー背景（全体を青で塗りつぶし） */
+.spectrum-bar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(90deg, #5b7fd4 0%, #3c5da8 100%);
+    border-radius: 9999px;
+    position: relative;
+    overflow: visible;
+}
+
+/* fillはドットの位置を決めるだけのコンテナ */
+.spectrum-fill {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+/* ドット（白丸）で割合位置を示す */
+.spectrum-dot {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 3px solid #3c5da8;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(60, 93, 168, 0.3);
+    transform: translateX(50%);
+}
+
+/* 下段: 左右の値ラベル */
 .spectrum-value {
-    grid-column: 1;
-    grid-row: 2;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 900;
     color: #3c5da8;
     text-align: left;
+    display: none; /* バー下のラベル行で表示するため個別非表示 */
 }
 
 .spectrum-value-right {
-    grid-column: 3;
-    grid-row: 2;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 700;
     color: #94a3b8;
     text-align: right;
+    display: none;
 }
 
+/* 左右ラベルを横並びで表示するためbar-wrapの後にflexコンテナを使う */
 .spectrum-bar-wrap {
-    grid-column: 2;
-    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-/* スペクトラムバー */
-.spectrum-bar {
-    height: 4px;
-    width: 100%;
-    background-color: #f1f5f9;
-    border-radius: 9999px;
-    position: relative;
+.spectrum-bar-labels {
+    display: flex;
+    justify-content: space-between;
 }
 
-.spectrum-dot {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: #3c5da8;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.spectrum-bar-label-left {
+    font-size: 9px;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+.spectrum-bar-label-right {
+    font-size: 9px;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* 強調ラベル（ドット位置に近い方） */
+.spectrum-bar-label--active {
+    color: #3c5da8;
+    font-weight: 900;
+    font-size: 13px;
 }
 
 .spectrum-more-btn {
@@ -606,7 +652,7 @@ details[open] > .filter-summary .filter-chevron {
     align-items: center;
     justify-content: center;
     gap: 4px;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
     color: #94a3b8;
     transition: color 0.2s;
@@ -630,7 +676,7 @@ details[open] > .filter-summary .filter-chevron {
 }
 
 .spectrum-category {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 900;
     color: #64748b;
     letter-spacing: 0.05em;
@@ -774,7 +820,7 @@ details[open] > .filter-summary .filter-chevron {
 @media (min-width: 768px) {
 
     /* --- メイン --- */
-    .main {
+    .main-content {
         max-width: 1280px;
         margin: 0 auto;
         padding: 32px 24px;
@@ -785,7 +831,7 @@ details[open] > .filter-summary .filter-chevron {
     }
 
     /* --- メイン（PC: 2カラムサイドバーレイアウト） --- */
-    .main {
+    .main-content {
         display: grid;
         grid-template-columns: 360px 1fr;
         align-items: stretch;
@@ -802,7 +848,7 @@ details[open] > .filter-summary .filter-chevron {
     /* フィルターをサイドバーとしてsticky */
     .filter-section {
         position: sticky;
-        top: 36px;
+        top: 50px;
         align-self: start;
         max-height: calc(100vh - 96px);
         overflow-y: auto;
@@ -1006,7 +1052,7 @@ details[open] > .filter-summary .filter-chevron {
     }
 
     .spectrum-header-text {
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 0.2em;
     }
 
@@ -1020,52 +1066,60 @@ details[open] > .filter-summary .filter-chevron {
         margin-top: 0;
     }
 
-    /* スペクトラムアイテム（PC: 縦並び、両側に項目名） */
+    /* スペクトラムアイテム（PC） */
     .spectrum-item {
-        grid-template-columns: auto 1fr auto;
-        grid-template-rows: auto auto;
-        gap: 10px 24px;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .spectrum-label {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        font-size: 11px;
+        font-size: 13px;
+        text-align: center;
     }
 
     .spectrum-bar-wrap {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .spectrum-value {
-        grid-column: 1;
-        grid-row: 2;
-        font-size: 12px;
-        text-align: left;
-    }
-
-    .spectrum-value-right {
-        grid-column: 3;
-        grid-row: 2;
-        font-size: 12px;
-        text-align: right;
-        color: #94a3b8;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
     }
 
     .spectrum-bar {
-        height: 8px;
+        height: 12px;
     }
 
     .spectrum-dot {
-        width: 16px;
-        height: 16px;
-        border-width: 2px;
+        width: 22px;
+        height: 22px;
+        border-width: 3px;
+    }
+
+    .spectrum-bar-label-left {
+        font-size: 12px;
+        color: #94a3b8;
+    }
+
+    .spectrum-bar-label-right {
+        font-size: 12px;
+        color: #94a3b8;
+    }
+
+    .spectrum-bar-label--active {
+        color: #3c5da8;
+        font-weight: 900;
+        font-size: 15px;
+    }
+
+    .spectrum-value {
+        display: none;
+    }
+
+    .spectrum-value-right {
+        display: none;
     }
 
     .spectrum-more-btn {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 900;
         letter-spacing: 0.1em;
         margin-top: 32px;
@@ -1085,7 +1139,7 @@ details[open] > .filter-summary .filter-chevron {
 
     .spectrum-category {
         grid-column: 1 / -1;
-        font-size: 11px;
+        font-size: 13px;
         padding-top: 24px;
         border-top: 1px solid #e2e8f0;
     }

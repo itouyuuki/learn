@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <main class="main">
+<body class="page-body">
+    <main class="main-content">
         <!-- 並び替えフォーム -->
         <section class="filter-section">
             <details class="filter-card">
@@ -156,159 +156,67 @@
                             </div>
                             <div class="spectrum-list">
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">勤務場所</span>
-                                    <span class="spectrum-value">外回り中心</span>
+                                    <span class="spectrum-label">コミュニケーション量</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 92%;"></div>
+                                            <div class="spectrum-fill" style="width: 20%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">会話少な目</span>
+                                            <span class="spectrum-bar-label-right">人との関わり重視</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">オフィス中心</span>
                                 </div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">アプローチ</span>
-                                    <span class="spectrum-value">既存（農耕）</span>
+                                    <span class="spectrum-label">働く場所・環境</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 78%;"></div>
+                                            <div class="spectrum-fill" style="width: 78%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">屋内で働く</span>
+                                            <span class="spectrum-bar-label-right">自然の中で働く</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">新規（狩猟）</span>
                                 </div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">商材価格</span>
-                                    <span class="spectrum-value">高額・コンサル</span>
+                                    <span class="spectrum-label">年齢層</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 85%;"></div>
+                                            <div class="spectrum-fill" style="width: 85%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">年齢層が低め</span>
+                                            <span class="spectrum-bar-label-right">年齢層が高め</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">単価・安価</span>
                                 </div>
                             </div>
                             <div class="spectrum-hidden-items">
                                 <div class="spectrum-category">働き方</div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">外勤／内勤</span>
-                                    <span class="spectrum-value">外回り中心</span>
+                                    <span class="spectrum-label">仕事のパターン</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 85%;"></div>
+                                            <div class="spectrum-fill" style="width: 85%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">一度覚えたら働ける</span>
+                                            <span class="spectrum-bar-label-right">変化に合わせて働く</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">内勤中心</span>
                                 </div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">エリア</span>
-                                    <span class="spectrum-value">地域密着</span>
+                                    <span class="spectrum-label">きつさと稼ぎやすさ</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 25%;"></div>
+                                            <div class="spectrum-fill" style="width: 25%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">負荷が比較的小さい</span>
+                                            <span class="spectrum-bar-label-right">負荷のぶん高収入</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">全国展開</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">個人／チーム</span>
-                                    <span class="spectrum-value">個人主体</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 35%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">チーム主体</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">分業／一気通貫</span>
-                                    <span class="spectrum-value">導入後サポートまで</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 80%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">専門担当制</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">型／裁量</span>
-                                    <span class="spectrum-value">自由度高い</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 72%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">マニュアル通り</span>
-                                </div>
-                                <div class="spectrum-category">営業難易度</div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">営業サイクル</span>
-                                    <span class="spectrum-value">長期提案</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 70%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">短期成約</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">提案深度</span>
-                                    <span class="spectrum-value">課題提案型</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 88%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">既存提案型</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">商材特性</span>
-                                    <span class="spectrum-value">無形商材</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 75%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">有形商材</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">顧客属性</span>
-                                    <span class="spectrum-value">法人顧客</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 90%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">個人顧客</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">価格裁量</span>
-                                    <span class="spectrum-value">価格交渉可能</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 60%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">固定価格</span>
-                                </div>
-                                <div class="spectrum-category">顧客獲得スタイル</div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">新規／既存</span>
-                                    <span class="spectrum-value">ファーミング</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 78%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">ハンティング</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">アプローチ</span>
-                                    <span class="spectrum-value">インバウンド</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 65%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">アウトバウンド</span>
                                 </div>
                             </div>
                         </div>
@@ -327,10 +235,10 @@
                     <div class="job-card-layout">
                         <div class="job-card-header">
                             <div class="job-card-header-info">
-                                <p class="job-card-company">ネクストリザベーション株式会社</p>
-                                <h3 class="job-card-title">戦略提案営業</h3>
+                                <p class="job-card-company">もっともっと文字が長い企業代表の株式会社</p>
+                                <h3 class="job-card-title">文字が長い長い長い営業職主です。こちら</h3>
                                 <div class="job-card-tags">
-                                    <span class="job-card-tag">クラウド・インフラ</span>
+                                    <span class="job-card-tag">文字がとてつもなく長いタグのデータです、</span>
                                     <span class="job-card-tag">外資系SaaS</span>
                                 </div>
                             </div>
@@ -350,164 +258,74 @@
                             </div>
                             <div class="spectrum-list">
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">勤務場所</span>
-                                    <span class="spectrum-value">外回り中心</span>
+                                    <span class="spectrum-label">コミュニケーション量</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 92%;"></div>
+                                            <div class="spectrum-fill" style="width: 20%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">会話少な目</span>
+                                            <span class="spectrum-bar-label-right">人との関わり重視</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">オフィス中心</span>
                                 </div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">アプローチ</span>
-                                    <span class="spectrum-value">既存（農耕）</span>
+                                    <span class="spectrum-label">働く場所・環境</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 78%;"></div>
+                                            <div class="spectrum-fill" style="width: 78%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">屋内で働く</span>
+                                            <span class="spectrum-bar-label-right">自然の中で働く</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">新規（狩猟）</span>
                                 </div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">商材価格</span>
-                                    <span class="spectrum-value">高額・コンサル</span>
+                                    <span class="spectrum-label">年齢層</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 85%;"></div>
+                                            <div class="spectrum-fill" style="width: 85%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">年齢層が低め</span>
+                                            <span class="spectrum-bar-label-right">年齢層が高め</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">単価・安価</span>
                                 </div>
                             </div>
                             <div class="spectrum-hidden-items">
                                 <div class="spectrum-category">働き方</div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">外勤／内勤</span>
-                                    <span class="spectrum-value">外回り中心</span>
+                                    <span class="spectrum-label">仕事のパターン</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 85%;"></div>
+                                            <div class="spectrum-fill" style="width: 85%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">一度覚えたら働ける</span>
+                                            <span class="spectrum-bar-label-right">変化に合わせて働く</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">内勤中心</span>
                                 </div>
                                 <div class="spectrum-item">
-                                    <span class="spectrum-label">エリア</span>
-                                    <span class="spectrum-value">地域密着</span>
+                                    <span class="spectrum-label">きつさと稼ぎやすさ</span>
                                     <div class="spectrum-bar-wrap">
                                         <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 25%;"></div>
+                                            <div class="spectrum-fill" style="width: 25%;"><span class="spectrum-dot"></span></div>
+                                        </div>
+                                        <div class="spectrum-bar-labels">
+                                            <span class="spectrum-bar-label-left">負荷が比較的小さい</span>
+                                            <span class="spectrum-bar-label-right">負荷のぶん高収入</span>
                                         </div>
                                     </div>
-                                    <span class="spectrum-value-right">全国展開</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">個人／チーム</span>
-                                    <span class="spectrum-value">個人主体</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 35%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">チーム主体</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">分業／一気通貫</span>
-                                    <span class="spectrum-value">導入後サポートまで</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 80%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">専門担当制</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">型／裁量</span>
-                                    <span class="spectrum-value">自由度高い</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 72%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">マニュアル通り</span>
-                                </div>
-                                <div class="spectrum-category">営業難易度</div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">営業サイクル</span>
-                                    <span class="spectrum-value">長期提案</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 70%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">短期成約</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">提案深度</span>
-                                    <span class="spectrum-value">課題提案型</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 88%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">既存提案型</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">商材特性</span>
-                                    <span class="spectrum-value">無形商材</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 75%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">有形商材</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">顧客属性</span>
-                                    <span class="spectrum-value">法人顧客</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 90%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">個人顧客</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">価格裁量</span>
-                                    <span class="spectrum-value">価格交渉可能</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 60%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">固定価格</span>
-                                </div>
-                                <div class="spectrum-category">顧客獲得スタイル</div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">新規／既存</span>
-                                    <span class="spectrum-value">ファーミング</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 78%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">ハンティング</span>
-                                </div>
-                                <div class="spectrum-item">
-                                    <span class="spectrum-label">アプローチ</span>
-                                    <span class="spectrum-value">インバウンド</span>
-                                    <div class="spectrum-bar-wrap">
-                                        <div class="spectrum-bar">
-                                            <div class="spectrum-dot" style="left: 65%;"></div>
-                                        </div>
-                                    </div>
-                                    <span class="spectrum-value-right">アウトバウンド</span>
                                 </div>
                             </div>
                         </div>
                         <p class="job-card-desc">
-                            当社は、長野県の東信・中信地域を中心に、地元の企業や商店の経営者の皆さんから"経営の悩み"をうかがい、ITを使ってそれを解決したり、解決を支援したりするサービスを提供しています。
+                            私は毎日現にこの始末人とかいう事のためで叱りますた。けっして今の意味家はすでにその推測なけれなくっまでに云っからつけですがも発展聴いですですて、そうとはしないましたある。
+
+金力に済んた事はけっして先刻に多分たですませ。何とも嘉納さんの通知本位多少推察をいた家この道徳あなたか納得をというお病気ますべきずでて、同じ生涯も私か一員自分にして、大森さんの訳に義務のあなたにせっかくお存在と折っがどこ部分からごお話にいうようにまあ皆努力を向いでたて、ぼうっとおもに病気にしだておりでしょのがありたない。それでもそうしてお生徒がしのも多少高等と通り過ぎたて、その本意には云っですけれどもという人で越せば切らですませ。
                         </p>
                     </div>
                     <button class="spectrum-more-btn">
@@ -519,6 +337,25 @@
         </div>
     </main>
     <script>
+        // スペクトラム：ドット位置に応じて強調ラベルを切り替え
+        document.querySelectorAll('.spectrum-item').forEach(function(item) {
+            const fill = item.querySelector('.spectrum-fill');
+            if (!fill) return;
+            const width = parseFloat(fill.style.width);
+            const labelLeft = item.querySelector('.spectrum-bar-label-left');
+            const labelRight = item.querySelector('.spectrum-bar-label-right');
+            if (!labelLeft || !labelRight) return;
+            if (width >= 50) {
+                // 右寄り → 右を強調
+                labelLeft.classList.remove('spectrum-bar-label--active');
+                labelRight.classList.add('spectrum-bar-label--active');
+            } else {
+                // 左寄り → 左を強調
+                labelLeft.classList.add('spectrum-bar-label--active');
+                labelRight.classList.remove('spectrum-bar-label--active');
+            }
+        });
+
         // PC時はフィルターを常時展開
         function syncFilterOpen() {
             const filterCard = document.querySelector('.filter-card');
