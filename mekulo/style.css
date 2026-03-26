@@ -96,11 +96,6 @@ body {
     display: none;
 }
 
-.filter-summary-icon {
-    color: #fff;
-    font-size: 18px;
-}
-
 .filter-summary-title {
     flex: 1;
     font-size: 13px;
@@ -110,8 +105,6 @@ body {
 }
 
 .filter-chevron {
-    color: #fff;
-    font-size: 20px;
     transition: transform 0.3s ease-out;
 }
 
@@ -168,10 +161,6 @@ details[open] > .filter-summary .filter-chevron {
 
 .filter-help-btn:hover {
     color: #3c5da8;
-}
-
-.filter-help-btn .material-symbols-outlined {
-    font-size: 14px;
 }
 
 /* param行のコンテナ */
@@ -318,10 +307,6 @@ details[open] > .filter-summary .filter-chevron {
     color: #3c5da8;
 }
 
-.filter-reset-btn .material-symbols-outlined {
-    font-size: 15px;
-}
-
 /* フィルタータグ */
 .filter-tags {
     display: flex;
@@ -353,11 +338,7 @@ details[open] > .filter-summary .filter-chevron {
     opacity: 0.85;
 }
 
-.filter-tag-icon {
-    font-size: 13px;
-}
-
-.filter-tag-close.material-symbols-outlined {
+.filter-tag-close {
     width: 16px;
     height: 16px;
     background-color: #e8edf8;
@@ -504,10 +485,6 @@ details[open] > .filter-summary .filter-chevron {
     text-decoration: none;
 }
 
-.job-card-link .material-symbols-outlined {
-    font-size: 14px;
-}
-
 /* 説明文 */
 .job-card-desc {
     grid-column: 1 / -1;
@@ -539,9 +516,8 @@ details[open] > .filter-summary .filter-chevron {
     margin-bottom: 12px;
 }
 
-.spectrum-header .material-symbols-outlined {
+.spectrum-header img {
     color: #3c5da8;
-    font-size: 14px;
 }
 
 .spectrum-header-text {
@@ -640,10 +616,6 @@ details[open] > .filter-summary .filter-chevron {
     color: #3c5da8;
 }
 
-.spectrum-more-btn .material-symbols-outlined {
-    font-size: 14px;
-}
-
 /* 隠し項目 */
 .spectrum-hidden-items {
     display: none;
@@ -738,11 +710,6 @@ details[open] > .filter-summary .filter-chevron {
     gap: 8px;
     opacity: 0.5;
     filter: grayscale(100%);
-}
-
-.footer-logo .material-symbols-outlined {
-    font-size: 20px;
-    color: #3c5da8;
 }
 
 .footer-logo-text {
@@ -1006,10 +973,6 @@ details[open] > .filter-summary .filter-chevron {
         box-shadow: 0 20px 25px -5px rgba(60, 93, 168, 0.3);
     }
 
-    .job-card-link .material-symbols-outlined {
-        font-size: 20px;
-    }
-
     .job-card-match {
         font-size: 12px;
         padding: 6px 16px;
@@ -1040,10 +1003,6 @@ details[open] > .filter-summary .filter-chevron {
     .spectrum-header {
         gap: 8px;
         margin-bottom: 32px;
-    }
-
-    .spectrum-header .material-symbols-outlined {
-        font-size: 20px;
     }
 
     .spectrum-header-text {
