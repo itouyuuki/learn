@@ -34,7 +34,7 @@
 .filter-section {
     border-radius: 16px;
     position: sticky;
-    top: 0px;
+    top: 8px;
     z-index: 40;
 }
 
